@@ -1,20 +1,32 @@
+import DotWhite from "@/assets/images/shapes/dots-white.png";
+import Dot from "@/assets/images/shapes/dots.png";
+import Element2 from "@/assets/images/shapes/element2.png";
+import BannerImg from "@/assets/images/thumbs/banner-img.png";
+import Image from "next/image";
+
 export default function BannerRight() {
    return (
       <div className="col-lg-6">
          <div className="banner-thumb">
-            <img src="./assets/images/thumbs/banner-img.png" alt="" />
-            <img
-               src="./assets/images/shapes/dots.png"
+            <Image width={744} height={614} src={BannerImg} alt="" />
+            <Image
+               width={50}
+               height={50}
+               src={Dot}
                alt=""
                className="dotted-img white-version"
             />
-            <img
-               src="./assets/images/shapes/dots-white.png"
+            <Image
+               width={50}
+               height={50}
+               src={DotWhite}
                alt=""
                className="dotted-img dark-version"
             />
-            <img
-               src="./assets/images/shapes/element2.png"
+            <Image
+               width={50}
+               height={50}
+               src={Element2}
                alt=""
                className="element two end-0"
             />
