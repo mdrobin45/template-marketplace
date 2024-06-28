@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "./components/BootstrapClient";
+import "./global.css";
 
 export const metadata = {
    title: "Create Next App",
