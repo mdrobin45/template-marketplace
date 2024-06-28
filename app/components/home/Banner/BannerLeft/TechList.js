@@ -41,7 +41,7 @@ export default function TechList() {
             data-bs-toggle="tooltip"
             data-bs-placement="top"
             data-bs-title="Laravel">
-            <Image src={TechIcon2} alt="" />
+            <Image width={20} height={20} src={TechIcon2} alt="" />
          </a>
          <a
             href="all-product.html"
