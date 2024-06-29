@@ -1,4 +1,3 @@
-import searchSVG from "@/assets/images/icons/search.svg";
 import Image from "next/image";
 
 export default function SearchBox() {
@@ -13,7 +12,7 @@ export default function SearchBox() {
             <Image
                height={20}
                width={20}
-               src={searchSVG.src}
+               src="/icons/search.svg"
                alt="Banner search input icon"
             />
          </button>

@@ -1,5 +1,5 @@
 export async function getPopularCategory() {
-   const res = await fetch("../data/popularCategories.json");
+   let res = await fetch("popularCategories.json");
    if (!res.ok) {
       throw new Error("Failed to fetch data");
    }

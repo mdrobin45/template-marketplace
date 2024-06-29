@@ -2,31 +2,31 @@
    {
       "title":"WordPress",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon1.svg"
+      "image":"icons/popular-icon1.svg"
    },
    {
       "title":"HTML",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon3.svg"
+      "image":"icons/popular-icon3.svg"
    },
    {
       "title":"JavaScript",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon4.svg"
+      "image":"icons/popular-icon4.svg"
    },
    {
       "title":"Mobile App",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon5.svg"
+      "image":"icons/popular-icon5.svg"
    },
    {
       "title":"PHP Script",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon6.svg"
+      "image":"/icons/popular-icon6.svg"
    },
    {
       "title":"Plugins",
       "totalCount":12900,
-      "image":"/app/assets/images/icons/popular-icon2.svg"
+      "image":"icons/popular-icon2.svg"
    }
 ]
