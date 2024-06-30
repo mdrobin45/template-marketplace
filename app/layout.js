@@ -1,11 +1,9 @@
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "components/common/Footer";
 import Header from "components/common/Header";
 import BootstrapClient from "./components/BootstrapClient";
 import "./global.css";
-config.autoAddCss = false;
 
 export const metadata = {
    title: "Create Next App",

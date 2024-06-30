@@ -2301,18 +2301,18 @@ select option {
 }
 
 .select-has-icon::before {
-    position: absolute;
-    content: "\f107";
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 0.75rem;
-    color: hsl(var(--main));
-    transition: 0.2s linear;
-    pointer-events: none;
-    color: hsl(var(--body-color)) !important;
+   position: absolute;
+   content: "\f107";
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 0.75rem;
+   color: hsl(var(--main));
+   transition: 0.2s linear;
+   pointer-events: none;
+   color: hsl(var(--body-color)) !important;
 }
 
 .select-has-icon.icon-black::before {
@@ -3361,16 +3361,16 @@ input[type=number] {
 }
 
 .has-submenu > a::before {
-    position: absolute;
-    content: "\f107";
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 0.625rem;
-    color: hsl(var(--heading-color)/0.4);
-    transition: 0.2s linear;
+   position: absolute;
+   content: "\f107";
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 0.625rem;
+   color: hsl(var(--heading-color)/0.4);
+   transition: 0.2s linear;
 }
 
 /* Submenu Start */
