@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FaHeart } from "react-icons/fa6";
 
 export default function ProductCard({
    thumbnail,
@@ -25,7 +24,7 @@ export default function ProductCard({
                   />
                </a>
                <button type="button" className="product-card__wishlist">
-                  <FaHeart className="text-danger" />
+                  <i class="fa-solid fa-heart text-danger"></i>
                </button>
             </div>
             <div className="product-card__content">

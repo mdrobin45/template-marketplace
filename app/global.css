@@ -3802,6 +3802,21 @@ input[type=number] {
 
 .footer-menu__link {
     position: relative;
+    padding-left: 22px;
+}
+
+.footer-menu__link::before {
+   position: absolute;
+   content: "\f105";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 0.875rem;
+   transition: 0.2s linear;
+   width: calc(100% + 1px);
+   height: calc(100% + 1px);
 }
 
 .footer-menu__link:hover {

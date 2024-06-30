@@ -2,30 +2,24 @@ import footerBg from "@/assets/images/gradients/footer-gradient.png";
 import logo from "@/assets/images/logo/white-logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import {
-   FaFacebookF,
-   FaInstagram,
-   FaLinkedinIn,
-   FaTwitter,
-} from "react-icons/fa6";
 
 // Social links
 const socialList = [
    {
       url: "#",
-      icon: <FaFacebookF />,
+      icon: <i class="fa-brands fa-facebook-f"></i>,
    },
    {
       url: "#",
-      icon: <FaTwitter />,
+      icon: <i class="fa-brands fa-twitter"></i>,
    },
    {
       url: "#",
-      icon: <FaInstagram />,
+      icon: <i class="fa-brands fa-instagram"></i>,
    },
    {
       url: "#",
-      icon: <FaLinkedinIn />,
+      icon: <i class="fa-brands fa-linkedin-in"></i>,
    },
 ];
 
