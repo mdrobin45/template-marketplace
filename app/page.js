@@ -1,5 +1,6 @@
 import Banner from "components/home/Banner/Banner";
 import BestSellingProduct from "components/home/BestSellingProduct/BestSellingProduct";
+import Brand from "components/home/Brand";
 import CTA from "components/home/CTA/CTA";
 import FeaturedAuthor from "components/home/FeaturedAuthor";
 import FeaturedProduct from "components/home/FeaturedProduct";
@@ -16,6 +17,7 @@ export default function Page() {
          <BestSellingProduct />
          <FeaturedAuthor />
          <CTA />
+         <Brand />
       </>
    );
 }
