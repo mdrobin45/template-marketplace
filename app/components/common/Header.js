@@ -30,6 +30,10 @@ const menu = [
             linkText: "HTML",
             linkURL: "#",
          },
+         {
+            linkText: "PHP",
+            linkURL: "#",
+         },
       ],
    },
 ];
