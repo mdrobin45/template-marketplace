@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "components/common/Footer";
 import BootstrapClient from "./components/BootstrapClient";
 import "./global.css";
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
          <body>
             {children}
             <BootstrapClient />
+            <Footer />
          </body>
       </html>
    );
