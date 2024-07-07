@@ -1,8 +1,27 @@
+"use client";
 import gradientBg from "@/assets/images/gradients/product-gradient.png";
 import element2 from "@/assets/images/shapes/element2.png";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { filterByCategory } from "utils/api";
 
 export default function NewArrival() {
+   const [category, setCategory] = useState("");
+   const [products, setProducts] = useState([]);
+
+   useEffect(() => {
+      // Filter product by category
+      (async () => {
+         try {
+            const data = await filterByCategory(category);
+            setProducts(data);
+         } catch (err) {
+            console.log(err);
+         }
+      })();
+   }, [category]);
+   console.log(products);
+
    return (
       <section className="arrival-product padding-y-120 section-bg position-relative z-index-1">
          <Image
@@ -32,6 +51,7 @@ export default function NewArrival() {
                role="tablist">
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("all-items")}
                      className="nav-link active"
                      id="pills-all-tab"
                      data-bs-toggle="pill"
@@ -45,6 +65,7 @@ export default function NewArrival() {
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("wordpress")}
                      className="nav-link"
                      id="pills-wordPress-tab"
                      data-bs-toggle="pill"
@@ -58,6 +79,7 @@ export default function NewArrival() {
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("html")}
                      className="nav-link"
                      id="pills-php-tab"
                      data-bs-toggle="pill"
@@ -66,11 +88,12 @@ export default function NewArrival() {
                      role="tab"
                      aria-controls="pills-php"
                      aria-selected="false">
-                     php
+                     HTML
                   </button>
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("javascript")}
                      className="nav-link"
                      id="pills-siteTemplate-tab"
                      data-bs-toggle="pill"
@@ -79,11 +102,12 @@ export default function NewArrival() {
                      role="tab"
                      aria-controls="pills-siteTemplate"
                      aria-selected="false">
-                     site Template
+                     javaScript
                   </button>
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("mobile app")}
                      className="nav-link"
                      id="pills-blogging-tab"
                      data-bs-toggle="pill"
@@ -92,11 +116,12 @@ export default function NewArrival() {
                      role="tab"
                      aria-controls="pills-blogging"
                      aria-selected="false">
-                     blogging
+                     Mobile App
                   </button>
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("marketing")}
                      className="nav-link"
                      id="pills-marketing-tab"
                      data-bs-toggle="pill"
@@ -110,6 +135,7 @@ export default function NewArrival() {
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("plugins")}
                      className="nav-link"
                      id="pills-plugins-tab"
                      data-bs-toggle="pill"
@@ -123,6 +149,7 @@ export default function NewArrival() {
                </li>
                <li className="nav-item" role="presentation">
                   <button
+                     onClick={() => setCategory("ui template")}
                      className="nav-link"
                      id="pills-uiTemplate-tab"
                      data-bs-toggle="pill"

@@ -1,12 +1,39 @@
-"use client";
 import Image from "next/image";
-import { useState } from "react";
-import { getPopularCategory } from "utils/dataFetch";
+
+const categories = [
+   {
+      title: "WordPress",
+      totalCount: 12900,
+      image: "icons/popular-icon1.svg",
+   },
+   {
+      title: "HTML",
+      totalCount: 12900,
+      image: "icons/popular-icon3.svg",
+   },
+   {
+      title: "JavaScript",
+      totalCount: 12900,
+      image: "icons/popular-icon4.svg",
+   },
+   {
+      title: "Mobile App",
+      totalCount: 12900,
+      image: "icons/popular-icon5.svg",
+   },
+   {
+      title: "PHP Script",
+      totalCount: 12900,
+      image: "/icons/popular-icon6.svg",
+   },
+   {
+      title: "Plugins",
+      totalCount: 12900,
+      image: "icons/popular-icon2.svg",
+   },
+];
 
 export default function PopularCategories() {
-   const [categories, setCategories] = useState([]);
-
-   getPopularCategory().then((data) => setCategories(data));
    return (
       <section className="popular padding-y-120 overflow-hidden">
          <div className="container container-two">
