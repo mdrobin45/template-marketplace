@@ -3,13 +3,16 @@ import gradientBg from "@/assets/images/gradients/product-gradient.png";
 import element2 from "@/assets/images/shapes/element2.png";
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import { useState } from "react";
+import { filterByCategory } from "utils/api";
 
 export default function NewArrival() {
+   const [category, setCategory] = useState("");
    const { data } = useQuery({
       queryKey: ["filterByCategory"],
       queryFn: () => filterByCategory("php"),
    });
-
+   console.log(data);
    return (
       <section className="arrival-product padding-y-120 section-bg position-relative z-index-1">
          <Image
