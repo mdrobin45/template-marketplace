@@ -157,13 +157,15 @@ export default function NewArrival() {
             <div className="tab-content">
                <div className="row gy-4">
                   {!isPending
-                     ? data?.map((product) => (
-                          <>
-                             <div className="col-xl-3 col-lg-4 col-sm-6">
-                                <ProductCard product={product} />
-                             </div>
-                          </>
-                       ))
+                     ? data.length
+                        ? data.map((product) => (
+                             <>
+                                <div className="col-xl-3 col-lg-4 col-sm-6">
+                                   <ProductCard product={product} />
+                                </div>
+                             </>
+                          ))
+                        : "No data found"
                      : "Loading"}
                </div>
             </div>
