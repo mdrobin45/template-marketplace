@@ -7,12 +7,12 @@ import sectionShape from "@/assets/images/shapes/spider-net.png";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "components/common/ProductCard";
 import Image from "next/image";
-import { featuredProduct } from "utils/api";
+import { getFeaturedProduct } from "utils/api";
 
 export default function FeaturedProduct() {
    const { data, isPending } = useQuery({
       queryKey: ["featuredProduct"],
-      queryFn: () => featuredProduct(),
+      queryFn: () => getFeaturedProduct(),
    });
    return (
       <section class="featured-product padding-y-120 position-relative z-index-1">
@@ -53,7 +53,10 @@ export default function FeaturedProduct() {
                      {!isPending ? (
                         data?.slice(0, 4).map((product) => (
                            <div key={product?.template._id} class="col-sm-6">
-                              <ProductCard product={product?.template} />
+                              <ProductCard
+                                 extraClass="box-shadow"
+                                 product={product?.template}
+                              />
                            </div>
                         ))
                      ) : (

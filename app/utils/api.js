@@ -13,9 +13,19 @@ export const filterByCategory = async (category) => {
 };
 
 // Get featured product
-export const featuredProduct = async () => {
+export const getFeaturedProduct = async () => {
    try {
       const { data } = await axiosRequest.get(`/product/featured`);
+      return data;
+   } catch {
+      return null;
+   }
+};
+
+// Get featured product
+export const getBestSellingProduct = async () => {
+   try {
+      const { data } = await axiosRequest.get(`/product/best-selling`);
       return data;
    } catch {
       return null;

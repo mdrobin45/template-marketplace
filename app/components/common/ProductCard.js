@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, extraClass }) {
    return (
-      <div className="product-card">
+      <div className={`product-card ${extraClass && extraClass}`}>
          <div className="product-card__thumb d-flex">
             <a href="product-details.html" className="link w-100">
                <Image
@@ -33,7 +33,7 @@ export default function ProductCard({ product }) {
                   </a>
                </span>
                <div className="flx-align gap-2">
-                  <h6 className="product-card__price mb-0">
+                  <h6 className="product-card__price mb-0 fw-800">
                      {product?.salePrice}
                   </h6>
                   <span className="product-card__prevPrice text-decoration-line-through">
