@@ -13,7 +13,6 @@ export default function NewArrival() {
       queryKey: ["filterByCategory", category],
       queryFn: () => filterByCategory(category),
    });
-   console.log(data);
    return (
       <section className="arrival-product padding-y-120 section-bg position-relative z-index-1">
          <Image

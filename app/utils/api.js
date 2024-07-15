@@ -11,3 +11,13 @@ export const filterByCategory = async (category) => {
       return null;
    }
 };
+
+// Get featured product
+export const featuredProduct = async () => {
+   try {
+      const { data } = await axiosRequest.get(`/product/featured`);
+      return data;
+   } catch {
+      return null;
+   }
+};
