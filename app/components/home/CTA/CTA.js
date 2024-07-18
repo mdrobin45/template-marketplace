@@ -4,9 +4,9 @@ import Support from "./Support";
 
 export default function CTA() {
    return (
-      <section class="seller padding-y-120">
-         <div class="container container-two">
-            <div class="row gy-4">
+      <section className="seller padding-y-120">
+         <div className="container container-two">
+            <div className="row gy-4">
                <BecomeSeller />
                <Affiliate />
                <Support />

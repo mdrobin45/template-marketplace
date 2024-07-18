@@ -7,10 +7,10 @@ import Image from "next/image";
 const brandLogo = [brand1, brand2, brand3, brand4];
 export default function Brand() {
    return (
-      <div class="brand">
-         <div class="container container">
-            <div class="brand-slider">
-               <div class="brand-item d-flex align-items-center justify-content-between">
+      <div className="brand">
+         <div className="container container">
+            <div className="brand-slider">
+               <div className="brand-item d-flex align-items-center justify-content-between">
                   {brandLogo.map((logo, index) => (
                      <Image
                         key={index}
@@ -18,7 +18,7 @@ export default function Brand() {
                         height={30}
                         src={logo}
                         alt=""
-                        class="white-version"
+                        className="white-version"
                      />
                   ))}
                </div>

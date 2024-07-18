@@ -14,7 +14,7 @@ export default function ProductCard({ product, extraClass }) {
                />
             </a>
             <button type="button" className="product-card__wishlist">
-               <i class="fa-solid fa-heart text-danger"></i>
+               <i className="fa-solid fa-heart text-danger"></i>
             </button>
          </div>
          <div className="product-card__content">

@@ -17,7 +17,7 @@ export default function BestSellingSlider() {
    });
    return (
       <>
-         <div class="selling-product-slider">
+         <div className="selling-product-slider">
             <Swiper
                modules={[Navigation, Pagination]}
                spaceBetween={50}

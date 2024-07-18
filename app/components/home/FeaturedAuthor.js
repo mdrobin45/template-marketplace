@@ -49,27 +49,27 @@ export default function FeaturedAuthor() {
    });
    return (
       <>
-         <section class="top-author padding-y-120 section-bg position-relative z-index-1">
+         <section className="top-author padding-y-120 section-bg position-relative z-index-1">
             <Image
                width="auto"
                height="auto"
                src={sectionBg}
                alt=""
-               class="bg--gradient white-version"
+               className="bg--gradient white-version"
             />
             <Image
                width={50}
                height={50}
                src={shape1}
                alt=""
-               class="spider-net position-absolute top-0 start-0 z-index--1 white-version"
+               className="spider-net position-absolute top-0 start-0 z-index--1 white-version"
             />
             <Image
                width={50}
                height={50}
                src={shape2}
                alt=""
-               class="position-absolute top-0 end-0 z-index--1"
+               className="position-absolute top-0 end-0 z-index--1"
             />
 
             <Image
@@ -77,25 +77,25 @@ export default function FeaturedAuthor() {
                height={50}
                src={sectionElement1}
                alt=""
-               class="element two"
+               className="element two"
             />
 
-            <div class="container container-two">
-               <div class="row gy-4 align-items-center">
-                  <div class="col-xl-5">
-                     <div class="section-content">
-                        <div class="section-heading style-left">
-                           <h3 class="section-heading__title">
+            <div className="container container-two">
+               <div className="row gy-4 align-items-center">
+                  <div className="col-xl-5">
+                     <div className="section-content">
+                        <div className="section-heading style-left">
+                           <h3 className="section-heading__title">
                               Top Featured Author
                            </h3>
-                           <p class="section-heading__desc font-18 w-sm">
+                           <p className="section-heading__desc font-18 w-sm">
                               Every month we pick some best products for you.
                               This months best web themes & templates have
                               arrived, chosen by our content specialists.
                            </p>
                         </div>
-                        <div class="author-info d-flex align-items-center gap-3">
-                           <div class="author-info__thumb">
+                        <div className="author-info d-flex align-items-center gap-3">
+                           <div className="author-info__thumb">
                               <Image
                                  width={50}
                                  height={50}
@@ -103,28 +103,28 @@ export default function FeaturedAuthor() {
                                  alt=""
                               />
                            </div>
-                           <div class="author-info__content">
-                              <h4 class="author-info__name mb-1">
+                           <div className="author-info__content">
+                              <h4 className="author-info__name mb-1">
                                  {data?.firstName + " " + data?.lastName}
                               </h4>
-                              <span class="author-info__text">
+                              <span className="author-info__text">
                                  Member Since {data?.createdAt}
                               </span>
                            </div>
                         </div>
-                        <div class="flx-align gap-2 mt-48">
+                        <div className="flx-align gap-2 mt-48">
                            <a
                               href="profile.html"
-                              class="btn btn-main btn-lg pill fw-300">
+                              className="btn btn-main btn-lg pill fw-300">
                               View Profile
                            </a>
                         </div>
                      </div>
                   </div>
-                  <div class="col-xl-6">
-                     <div class="circle-content position-relative">
-                        <div class="circle static-circle">
-                           <div class="circle__badge">
+                  <div className="col-xl-6">
+                     <div className="circle-content position-relative">
+                        <div className="circle static-circle">
+                           <div className="circle__badge">
                               <Image
                                  width={30}
                                  height={30}
@@ -132,14 +132,14 @@ export default function FeaturedAuthor() {
                                  alt=""
                               />
                            </div>
-                           <div class="circle__text">
+                           <div className="circle__text">
                               <p>DPmarketer Top Featured Author</p>
                            </div>
                         </div>
-                        <div class="row gy-4 card-wrapper">
+                        <div className="row gy-4 card-wrapper">
                            {!isPending ? (
                               data.templates?.map((product) => (
-                                 <div key={product?._id} class="col-sm-6">
+                                 <div key={product?._id} className="col-sm-6">
                                     <ProductCard
                                        extraClass="box-shadow"
                                        product={product}

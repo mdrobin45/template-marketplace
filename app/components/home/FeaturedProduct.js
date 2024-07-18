@@ -15,27 +15,27 @@ export default function FeaturedProduct() {
       queryFn: () => getFeaturedProduct(),
    });
    return (
-      <section class="featured-product padding-y-120 position-relative z-index-1">
+      <section className="featured-product padding-y-120 position-relative z-index-1">
          <Image
             width={500}
             height={500}
             src={sectionBg}
             alt=""
-            class="bg--gradient white-version"
+            className="bg--gradient white-version"
          />
          <Image
             width={50}
             height={50}
             src={sectionShape}
             alt=""
-            class="spider-net position-absolute top-0 end-0 z-index--1 white-version"
+            className="spider-net position-absolute top-0 end-0 z-index--1 white-version"
          />
          <Image
             width={50}
             height={50}
             src={sectionShape2}
             alt=""
-            class="spider-net position-absolute top-0 end-0 z-index--1 dark-version"
+            className="spider-net position-absolute top-0 end-0 z-index--1 dark-version"
          />
 
          <Image
@@ -43,16 +43,18 @@ export default function FeaturedProduct() {
             height={50}
             src={SectionElement}
             alt=""
-            class="element two"
+            className="element two"
          />
 
-         <div class="container container-two">
-            <div class="row gy-4 flex-wrap-reverse align-items-center">
-               <div class="col-xl-6">
-                  <div class="row gy-4 card-wrapper">
+         <div className="container container-two">
+            <div className="row gy-4 flex-wrap-reverse align-items-center">
+               <div className="col-xl-6">
+                  <div className="row gy-4 card-wrapper">
                      {!isPending ? (
                         data?.slice(0, 4).map((product) => (
-                           <div key={product?.template._id} class="col-sm-6">
+                           <div
+                              key={product?.template._id}
+                              className="col-sm-6">
                               <ProductCard
                                  extraClass="box-shadow"
                                  product={product?.template}
@@ -64,14 +66,14 @@ export default function FeaturedProduct() {
                      )}
                   </div>
                </div>
-               <div class="col-xl-1 d-xl-block d-none"></div>
-               <div class="col-xl-5">
-                  <div class="section-content">
-                     <div class="section-heading style-left">
-                        <h3 class="section-heading__title">
+               <div className="col-xl-1 d-xl-block d-none"></div>
+               <div className="col-xl-5">
+                  <div className="section-content">
+                     <div className="section-heading style-left">
+                        <h3 className="section-heading__title">
                            Featured Products
                         </h3>
-                        <p class="section-heading__desc font-18 w-sm">
+                        <p className="section-heading__desc font-18 w-sm">
                            Every month we pick some best products for you. This
                            months best web themes & templates have arrived,
                            chosen by our content specialists.
@@ -79,7 +81,7 @@ export default function FeaturedProduct() {
                      </div>
                      <a
                         href="all-product.html"
-                        class="btn btn-main btn-lg pill fw-300">
+                        className="btn btn-main btn-lg pill fw-300">
                         View All Items
                      </a>
                   </div>
