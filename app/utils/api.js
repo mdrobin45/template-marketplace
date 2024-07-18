@@ -31,3 +31,13 @@ export const getBestSellingProduct = async () => {
       return null;
    }
 };
+
+// Get featured author
+export const getFeaturedAuthor = async () => {
+   try {
+      const { data } = await axiosRequest.get(`/author/featured`);
+      return data;
+   } catch {
+      return null;
+   }
+};
