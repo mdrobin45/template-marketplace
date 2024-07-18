@@ -4,7 +4,7 @@ export default function ProductCard({ product, extraClass }) {
    return (
       <div className={`product-card ${extraClass && extraClass}`}>
          <div className="product-card__thumb d-flex">
-            <a href="product-details.html" className="link w-100">
+            <a href={`/product-details/${product?._id}`} className="link w-100">
                <Image
                   width={290}
                   height={160}
@@ -19,8 +19,8 @@ export default function ProductCard({ product, extraClass }) {
          </div>
          <div className="product-card__content">
             <h6 className="product-card__title">
-               <a href="product-details.html" className="link">
-                  {product?.title}
+               <a href={`/product-details/${product?._id}`} className="link">
+                  {product?.name}
                </a>
             </h6>
             <div className="product-card__info flx-between gap-2">
@@ -28,7 +28,7 @@ export default function ProductCard({ product, extraClass }) {
                   by{" "}
                   <a
                      href="profile.html"
-                     className="link hover-text-decoration-underline">
+                     className="link hover-text-decoration-underline text-primary">
                      {product?.category}
                   </a>
                </span>

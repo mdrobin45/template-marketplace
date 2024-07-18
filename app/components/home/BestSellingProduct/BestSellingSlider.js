@@ -26,7 +26,7 @@ export default function BestSellingSlider() {
                pagination={{ clickable: true }}>
                {!isPending ? (
                   data?.slice(0, 12).map((product) => (
-                     <SwiperSlide key={product?.template?._id}>
+                     <SwiperSlide key={product?._id}>
                         <ProductCard
                            extraClass="shadow-sm overlay-none"
                            product={product?.template}
