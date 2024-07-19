@@ -6,9 +6,9 @@ export default function ProductDetails() {
    return (
       <>
          <Breadcrumb />
-         <div class="product-details mt-32 padding-b-120">
-            <div class="container container-two">
-               <div class="row gy-4">
+         <div className="product-details mt-32 padding-b-120">
+            <div className="container container-two">
+               <div className="row gy-4">
                   <ProductDetailsTabContent />
                   <ProductDetailsSidebar />
                </div>

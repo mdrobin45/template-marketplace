@@ -4,8 +4,8 @@ import ProductRatings from "./Ratings";
 
 export default function ProductDetailsTabContent() {
    return (
-      <div class="col-lg-8">
-         <div class="tab-content" id="pills-tabContent">
+      <div className="col-lg-8">
+         <div className="tab-content" id="pills-tabContent">
             <ProductDescription />
             <ProductRatings />
             <ProductComments />
