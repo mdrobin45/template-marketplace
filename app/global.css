@@ -2027,7 +2027,10 @@ button:focus {
 .btn-icon:hover {
     transform: scale(1.04);
 }
-
+.tab-pills .tab-link.active {
+   border-bottom: 2px solid;
+   padding-bottom: 16px;
+}
 .btn .icon-right {
     margin-left: 8px;
     font-size: 1rem;
