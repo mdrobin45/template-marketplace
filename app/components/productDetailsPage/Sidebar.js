@@ -70,7 +70,7 @@ export default function ProductDetailsSidebar() {
                   />
                   <label
                      className="form-check-label mb-0 fw-300 text-body"
-                     for="extended">
+                     htmlFor="extended">
                      Extended support 12 month
                   </label>
                </div>
