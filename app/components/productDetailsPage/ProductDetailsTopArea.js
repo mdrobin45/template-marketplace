@@ -4,7 +4,7 @@ import checkIcon from "@/assets/images/icons/check-icon.svg";
 import shareIcon from "@/assets/images/icons/share-icon.svg";
 import Image from "next/image";
 
-export default function Breadcrumb() {
+export default function ProductDetailsTopArea() {
    return (
       <section className="breadcrumb border-bottom p-0 d-block section-bg position-relative z-index-1">
          <div className="breadcrumb-two">

@@ -1,11 +1,11 @@
-import Banner from "components/home/Banner/Banner";
-import BestSellingProduct from "components/home/BestSellingProduct/BestSellingProduct";
-import Brand from "components/home/Brand";
-import CTA from "components/home/CTA/CTA";
-import FeaturedAuthor from "components/home/FeaturedAuthor";
-import FeaturedProduct from "components/home/FeaturedProduct";
-import NewArrival from "components/home/NewArrival";
-import PopularCategories from "components/home/PopularCategories";
+import Banner from "components/homePage/Banner/Banner";
+import BestSellingProduct from "components/homePage/BestSellingProduct/BestSellingProduct";
+import Brand from "components/homePage/Brand";
+import CTA from "components/homePage/CTA/CTA";
+import FeaturedAuthor from "components/homePage/FeaturedAuthor";
+import FeaturedProduct from "components/homePage/FeaturedProduct";
+import NewArrival from "components/homePage/NewArrival";
+import PopularCategories from "components/homePage/PopularCategories";
 
 export default function Page() {
    return (
