@@ -5,7 +5,7 @@ export default function ProductRatings() {
          id="pills-rating"
          role="tabpanel"
          aria-labelledby="pills-rating-tab"
-         tabindex="0">
+         tabIndex="0">
          <div className="product-review-wrapper">
             <div className="product-review">
                <div className="product-review__top flx-between">

@@ -5,7 +5,7 @@ export default function ProductDescription() {
          id="pills-product-details"
          role="tabpanel"
          aria-labelledby="pills-product-details-tab"
-         tabindex="0">
+         tabIndex="0">
          <div className="product-details">
             <div className="product-details__thumb">
                <img src="assets/images/thumbs/product-details.png" alt="" />
