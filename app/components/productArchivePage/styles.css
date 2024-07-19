@@ -1,0 +1,19 @@
+.breadcrumb {
+   margin-bottom: 0;
+   padding: 60px 0;
+}
+.breadcrumb-one-content {
+   max-width: 704px;
+}
+.breadcrumb-one-content__desc {
+   margin-bottom: 32px;
+}
+.breadcrumb-one-content__title{
+   font-size: 38px;
+   font-weight: 700;
+}
+.breadcrumb-one-content__desc {
+   margin-bottom: 32px;
+   font-weight: 400;
+   color: rgb(104, 105, 115);
+}
