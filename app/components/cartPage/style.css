@@ -1,0 +1,13 @@
+.process-list {
+   margin-top: clamp(2rem, -1.195rem + 6.656vw, 4.625rem) !important;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   background-color: hsl(var(--white) / 0.3);
+   border: 1px solid hsl(var(--white));
+   border-radius: 16px;
+   padding: 12px !important;
+   backdrop-filter: blur(5px);
+   gap: 10px;
+}

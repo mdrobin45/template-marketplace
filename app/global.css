@@ -1826,6 +1826,25 @@ button:focus {
     padding: 20px 30px;
     padding-top: 0;
 }
+.breadcrumb {
+   margin-bottom: 0 !important;
+   padding: 60px 0 !important;
+}
+.breadcrumb-one-content {
+   max-width: 704px !important;
+}
+.breadcrumb-one-content__desc {
+   margin-bottom: 32px !important;
+}
+.breadcrumb-one-content__title{
+   font-size: 38px !important;
+   font-weight: 700 !important;
+}
+.breadcrumb-one-content__desc {
+   margin-bottom: 32px !important;
+   font-weight: 400 !important;
+   color: rgb(104, 105, 115) !important;
+}
 
 @media screen and (max-width: 575px) {
     .common-accordion .accordion-body {
