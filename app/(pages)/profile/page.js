@@ -1,3 +1,4 @@
+import Download from "components/profilePage/Download";
 import Earnings from "components/profilePage/Earnings";
 import ProfileInfo from "components/profilePage/ProfileInfo";
 import Reviews from "components/profilePage/Reviews";
@@ -19,6 +20,7 @@ export default function Profile() {
                   <Earnings />
                   <Statement />
                   <Reviews />
+                  <Download />
                </div>
             </div>
          </section>
