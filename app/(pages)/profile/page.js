@@ -1,3 +1,4 @@
+import Earnings from "components/profilePage/Earnings";
 import ProfileInfo from "components/profilePage/ProfileInfo";
 import Settings from "components/profilePage/Settings";
 import Templates from "components/profilePage/Templates";
@@ -13,6 +14,7 @@ export default function Profile() {
                   <ProfileInfo />
                   <Templates />
                   <Settings />
+                  <Earnings />
                </div>
             </div>
          </section>
