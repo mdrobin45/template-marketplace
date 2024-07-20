@@ -1,6 +1,7 @@
 import Earnings from "components/profilePage/Earnings";
 import ProfileInfo from "components/profilePage/ProfileInfo";
 import Settings from "components/profilePage/Settings";
+import Statement from "components/profilePage/Statement";
 import Templates from "components/profilePage/Templates";
 import TopAreaProfile from "components/profilePage/TopAreaProfile";
 
@@ -15,6 +16,7 @@ export default function Profile() {
                   <Templates />
                   <Settings />
                   <Earnings />
+                  <Statement />
                </div>
             </div>
          </section>
