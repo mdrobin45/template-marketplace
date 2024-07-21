@@ -12,7 +12,12 @@ import Image from "next/image";
 import "../../style.css";
 import Process from "./Process";
 
-export default function CheckoutBanner() {
+export default function CheckoutBanner({
+   cartActive,
+   mailActive,
+   paymentActive,
+   orderActive,
+}) {
    return (
       <section class="breadcrumb breadcrumb-four padding-static-y-60 section-bg position-relative z-index-1 overflow-hidden">
          <Image
@@ -74,16 +79,19 @@ export default function CheckoutBanner() {
                         <Process
                            colorIcon={mailIcon}
                            whiteIcon={mailIconWhite}
+                           activeClass={mailActive && "activePage"}
                            title="Mailing Address"
                         />
                         <Process
                            colorIcon={paymentIcon}
                            whiteIcon={paymentIconWhite}
+                           activeClass={paymentActive && "activePage"}
                            title="Payment Methods"
                         />
                         <Process
                            colorIcon={orderIcon}
                            whiteIcon={orderIconWhite}
+                           activeClass={orderActive && "activePage"}
                            title="Order Review"
                         />
                      </ul>

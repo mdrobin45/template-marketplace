@@ -1,7 +1,9 @@
+import CheckoutBanner from "components/common/checkoutBanner/CheckoutBanner";
+
 export default function Checkout() {
    return (
       <>
-         <h2>Hllo</h2>
+         <CheckoutBanner mailActive={true} />
       </>
    );
 }
