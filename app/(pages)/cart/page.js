@@ -1,10 +1,10 @@
 import CartList from "components/cartPage/CartList";
-import PageBanner from "components/cartPage/PageBanner";
+import CheckoutBanner from "components/common/checkoutBanner/CheckoutBanner";
 
 export default function CartPage() {
    return (
       <>
-         <PageBanner />
+         <CheckoutBanner />
          <CartList />
       </>
    );
