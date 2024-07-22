@@ -54,23 +54,27 @@ export default function CheckoutBanner({
 
                      <ul class="process-list">
                         <Process
+                           url="/cart"
                            whiteIcon={cartIconWhite}
                            activeClass="activePage"
                            title="Shopping Cart"
                         />
                         <Process
+                           url="/checkout"
                            colorIcon={mailIcon}
                            whiteIcon={mailIconWhite}
                            activeClass={mailActive && "activePage"}
                            title="Mailing Address"
                         />
                         <Process
+                           url="/checkout/payment"
                            colorIcon={paymentIcon}
                            whiteIcon={paymentIconWhite}
                            activeClass={paymentActive && "activePage"}
                            title="Payment Methods"
                         />
                         <Process
+                           url="/checkout/thank-you"
                            colorIcon={orderIcon}
                            whiteIcon={orderIconWhite}
                            activeClass={orderActive && "activePage"}

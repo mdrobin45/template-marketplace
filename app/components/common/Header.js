@@ -11,8 +11,8 @@ const menu = [
       submenu: false,
    },
    {
-      linkText: "Project",
-      linkURL: "/",
+      linkText: "Templates",
+      linkURL: "/templates",
       submenu: false,
    },
    {
@@ -100,21 +100,6 @@ export default function Header() {
                         size="small">
                         <Image width={20} height={20} src={userIcon} alt="" />{" "}
                      </Button>
-                     <div className="language-select flx-align select-has-icon">
-                        <Image
-                           width={20}
-                           height={20}
-                           src="/icons/globe.svg"
-                           alt=""
-                           className="globe-icon white-version"
-                        />
-                        <select className="select py-0 ps-2 border-0 fw-500">
-                           <option value="1">Eng</option>
-                           <option value="2">Bn</option>
-                           <option value="3">Eur</option>
-                           <option value="4">Urd</option>
-                        </select>
-                     </div>
                   </div>
                   <button type="button" className="toggle-mobileMenu d-lg-none">
                      <i className="las la-bars"></i>

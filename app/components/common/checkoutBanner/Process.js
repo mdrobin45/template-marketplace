@@ -1,9 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Process({ colorIcon, whiteIcon, activeClass, title }) {
+export default function Process({
+   colorIcon,
+   whiteIcon,
+   activeClass,
+   title,
+   url,
+}) {
    return (
       <li class={`process-list__item ${activeClass && activeClass}`}>
-         <a href="cart-personal.html" class="process-list__link">
+         <Link href={url} class="process-list__link">
             <div class="icons">
                {whiteIcon ? (
                   <span class="icon white">
@@ -32,7 +39,7 @@ export default function Process({ colorIcon, whiteIcon, activeClass, title }) {
                )}
             </div>
             <span class="text">{title}</span>
-         </a>
+         </Link>
       </li>
    );
 }

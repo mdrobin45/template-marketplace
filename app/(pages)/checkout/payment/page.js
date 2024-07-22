@@ -1,5 +1,6 @@
 import curveBg2 from "@/assets/images/shapes/pattern-curve-five.png";
 import curveBg1 from "@/assets/images/shapes/pattern-curve-six.png";
+import Button from "components/common/Button";
 import CheckoutBanner from "components/common/checkoutBanner/CheckoutBanner";
 import Image from "next/image";
 
@@ -132,14 +133,7 @@ export default function PaymentMethods() {
                </div>
 
                <div class="cart-content__bottom flx-between gap-2">
-                  <a
-                     href="cart-personal.html"
-                     class="btn btn-outline-light flx-align gap-2 pill btn-lg">
-                     <span class="icon line-height-1 font-20">
-                        <i class="las la-arrow-left"></i>
-                     </span>
-                     Back
-                  </a>
+                  <Button label="Back" url="/checkout" secondary={true} />
                </div>
             </div>
          </section>
