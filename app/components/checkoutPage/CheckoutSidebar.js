@@ -32,13 +32,7 @@ export default function CheckoutSidebar() {
             <button
                type="submit"
                class="btn btn-outline-light pill btn-lg w-100 mt-32">
-               <span class="icon icon-left">
-                  <img
-                     src="assets/images/icons/cart-reverse.svg"
-                     alt=""
-                     class="white-version"
-                  />
-               </span>
+               <span class="icon icon-left"></span>
                Purchased Now
             </button>
          </div>
