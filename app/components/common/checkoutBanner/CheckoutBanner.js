@@ -50,25 +50,7 @@ export default function CheckoutBanner({
                      <h3 class="breadcrumb-one-content__title text-center mb-3 text-capitalize">
                         Shopping Cart
                      </h3>
-                     <ul class="breadcrumb-list flx-align justify-content-center gap-2 mb-2">
-                        <li class="breadcrumb-list__item font-14 text-body">
-                           <a
-                              href="index.html"
-                              class="breadcrumb-list__link text-body hover-text-main">
-                              Home
-                           </a>
-                        </li>
-                        <li class="breadcrumb-list__item font-14 text-body">
-                           <span class="breadcrumb-list__icon font-10">
-                              <i class="fas fa-chevron-right"></i>
-                           </span>
-                        </li>
-                        <li class="breadcrumb-list__item font-14 text-body">
-                           <span class="breadcrumb-list__text">
-                              My Shopping Cart
-                           </span>
-                        </li>
-                     </ul>
+                     {/* <Breadcrumb breadcrumbs={["Home"]} /> */}
 
                      <ul class="process-list">
                         <Process

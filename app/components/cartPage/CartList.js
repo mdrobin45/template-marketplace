@@ -1,3 +1,5 @@
+import Button from "components/common/Button";
+
 export default function CartList() {
    return (
       <div class="cart padding-y-120">
@@ -247,22 +249,12 @@ export default function CartList() {
                </div>
 
                <div class="cart-content__bottom flx-between gap-2">
-                  <a
-                     href="all-product.html"
-                     class="btn btn-outline-light flx-align gap-2 pill btn-lg">
-                     <span class="icon line-height-1 font-20">
-                        <i class="las la-arrow-left"></i>
-                     </span>
-                     Continue Shopping
-                  </a>
-                  <a
-                     href="cart-personal.html"
-                     class="btn btn-main flx-align gap-2 pill btn-lg">
-                     Next
-                     <span class="icon line-height-1 font-20">
-                        <i class="las la-arrow-right"></i>
-                     </span>
-                  </a>
+                  <Button
+                     secondary={true}
+                     label="Continue Shopping"
+                     url="/products"
+                  />
+                  <Button label="Next" url="/checkout" />
                </div>
             </div>
          </div>

@@ -1,6 +1,8 @@
+import userIcon from "@/assets/images/icons/user.svg";
 import logo from "@/assets/images/logo/logo-two.png";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const menu = [
    {
@@ -78,8 +80,8 @@ export default function Header() {
                   </ul>
                </div>
                <div className="header-right flx-align">
-                  <a
-                     href="cart.html"
+                  <Link
+                     href="/cart"
                      className="header-right__button cart-btn position-relative">
                      <Image
                         width={20}
@@ -89,20 +91,15 @@ export default function Header() {
                         className="white-version"
                      />
                      <span className="qty-badge font-12">0</span>
-                  </a>
+                  </Link>
 
                   <div className="header-right__inner gap-3 flx-align d-lg-flex d-none">
-                     <a href="register.html" className="btn btn-main pill">
-                        <span className="icon-left icon">
-                           <Image
-                              width={20}
-                              height={20}
-                              src="/icons/user.svg"
-                              alt=""
-                           />{" "}
-                        </span>
-                        Create Account
-                     </a>
+                     <Button
+                        label="Create Account"
+                        url="/register"
+                        size="small">
+                        <Image width={20} height={20} src={userIcon} alt="" />{" "}
+                     </Button>
                      <div className="language-select flx-align select-has-icon">
                         <Image
                            width={20}
