@@ -4,7 +4,7 @@ import InputField from "components/common/InputField";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Register() {
+export default function Login() {
    return (
       <section class="account d-flex">
          <div class="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
@@ -18,18 +18,10 @@ export default function Register() {
          <div class="account__right padding-t-120 flx-align">
             <div class="account-content">
                <h4 class="account-content__title fw-bold text-capitalize">
-                  Create A Free Account
+                  Sign In
                </h4>
-               <p className="mb-3">Welcome back! please enter your detail</p>
+               <p className="mb-3">Welcome back! please enter your details</p>
                <form>
-                  <InputField
-                     name="name"
-                     placeholder="Enter your name"
-                     required={true}
-                     id="name"
-                     type="text"
-                     label="Full Name"
-                  />
                   <InputField
                      name="email"
                      placeholder="example@mail.com"
@@ -40,22 +32,32 @@ export default function Register() {
                   />
                   <InputField
                      name="password"
-                     placeholder="6+ characters, 1 Capital letter"
+                     placeholder="Enter your password"
                      required={true}
                      id="password"
                      type="password"
                      label="Password"
                   />
-                  <InputField
-                     name="term"
-                     required={true}
-                     id="term"
-                     type="checkbox"
-                     label="I agree to the terms & conditions"
-                  />
+                  <div class="col-12">
+                     <div class="flx-between gap-1 mb-3">
+                        <div class="common-check my-2">
+                           <InputField
+                              name="rememberme"
+                              id="rememberme"
+                              type="checkbox"
+                              label="Keep me signed in"
+                           />
+                        </div>
+                        <Link
+                           href="/restore-password"
+                           class="forgot-password text-decoration-underline text-main text-poppins font-14">
+                           Forgot password?
+                        </Link>
+                     </div>
+                  </div>
                   <button type="submit" class="btn btn-main btn-lg w-100 pill">
                      {" "}
-                     Sign up
+                     Sign In
                   </button>
                   <button
                      type="submit"
@@ -65,17 +67,19 @@ export default function Register() {
                      </span>
                      Sign up with google
                   </button>
-                  <div class="have-account mt-3">
+               </form>
+               <div class="col-sm-12 mb-0 mt-3">
+                  <div class="have-account">
                      <p class="text font-14">
-                        Already a member?{" "}
+                        New to the market?{" "}
                         <Link
-                           class="link text-main text-decoration-underline  fw-500"
-                           href="/login">
-                           Login
+                           class="link text-main text-decoration-underline fw-500"
+                           href="/register">
+                           Sign in
                         </Link>
                      </p>
                   </div>
-               </form>
+               </div>
             </div>
          </div>
       </section>
