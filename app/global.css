@@ -1828,7 +1828,7 @@ button:focus {
 }
 .breadcrumb {
    margin-bottom: 0 !important;
-   padding: 60px 0 !important;
+   /* padding: 60px 0 !important; */
 }
 .breadcrumb-one-content {
    max-width: 704px !important;

@@ -19,7 +19,7 @@ export default function ProductCard({ product, extraClass }) {
          </div>
          <div className="product-card__content">
             <h6 className="product-card__title">
-               <a href={`/product-details/${product?._id}`} className="link">
+               <a href={`/template-details/${product?._id}`} className="link">
                   {product?.name}
                </a>
             </h6>
