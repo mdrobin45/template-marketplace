@@ -1,9 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "components/common/Footer";
-import Header from "components/common/Header";
-import { TanstackProvider } from "Providers/Providers";
-import BootstrapClient from "./components/BootstrapClient";
 import "./global.css";
 
 export const metadata = {
@@ -14,14 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
    return (
       <html lang="en">
-         <body>
-            <TanstackProvider>
-               <Header />
-               {children}
-               <BootstrapClient />
-               <Footer />
-            </TanstackProvider>
-         </body>
+         <body>{children}</body>
       </html>
    );
 }

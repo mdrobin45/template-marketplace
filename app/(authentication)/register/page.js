@@ -6,6 +6,17 @@ import Link from "next/link";
 export default function Register() {
    return (
       <section class="account d-flex">
+         <div class="account__left d-md-flex d-none flx-align section-bg position-relative z-index-1 overflow-hidden">
+            <div class="account-thumb">
+               <img src="assets/images/thumbs/banner-img.png" alt="" />
+               <div class="statistics animation bg-main text-center">
+                  <h5 class="statistics__amount text-white">50k</h5>
+                  <span class="statistics__text text-white font-14">
+                     Customers
+                  </span>
+               </div>
+            </div>
+         </div>
          <div class="account__right padding-t-120 flx-align">
             <div class="account-content">
                <h4 class="account-content__title fw-bold mb-48 text-capitalize">

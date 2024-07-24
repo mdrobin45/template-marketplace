@@ -7,7 +7,7 @@ import FeaturedProduct from "components/homePage/FeaturedProduct";
 import NewArrival from "components/homePage/NewArrival";
 import PopularCategories from "components/homePage/PopularCategories";
 
-export default function Page() {
+export default function Home() {
    return (
       <>
          <Banner />
