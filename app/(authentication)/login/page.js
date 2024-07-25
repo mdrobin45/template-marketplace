@@ -1,5 +1,5 @@
 import googleIcon from "@/assets/images/icons/google.svg";
-import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
+import loginVector from "@/assets/images/thumbs/login-vector.jpg";
 import InputField from "components/common/InputField";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function Login() {
             <Image
                width={900}
                height={900}
-               src={registerVector}
+               src={loginVector}
                alt="Register Vector"
             />
          </div>
@@ -75,7 +75,7 @@ export default function Login() {
                         <Link
                            class="link text-main text-decoration-underline fw-500"
                            href="/register">
-                           Sign in
+                           Sign Up
                         </Link>
                      </p>
                   </div>

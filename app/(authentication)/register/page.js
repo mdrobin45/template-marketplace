@@ -71,7 +71,7 @@ export default function Register() {
                         <Link
                            class="link text-main text-decoration-underline  fw-500"
                            href="/login">
-                           Login
+                           Sign In
                         </Link>
                      </p>
                   </div>
