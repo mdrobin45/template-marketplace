@@ -1,13 +1,22 @@
+"use client";
 import googleIcon from "@/assets/images/icons/google.svg";
 import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
 import InputField from "components/common/InputField";
+import authUserSignUp from "modules/auth-signup-password";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Register() {
+   const formSubmission = (e) => {
+      e.preventDefault();
+      const { email, password } = e.target;
+      authUserSignUp(email.value, password.value).then((res) =>
+         console.log(res)
+      );
+   };
    return (
-      <section class="account d-flex">
-         <div class="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
+      <section className="account d-flex">
+         <div className="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
             <Image
                width={900}
                height={900}
@@ -15,13 +24,13 @@ export default function Register() {
                alt="Register Vector"
             />
          </div>
-         <div class="account__right padding-t-120 flx-align">
-            <div class="account-content">
-               <h4 class="account-content__title fw-bold text-capitalize">
+         <div className="account__right padding-t-120 flx-align">
+            <div className="account-content">
+               <h4 className="account-content__title fw-bold text-capitalize">
                   Create A Free Account
                </h4>
                <p className="mb-3">Welcome back! please enter your detail</p>
-               <form>
+               <form onSubmit={formSubmission}>
                   <InputField
                      name="name"
                      placeholder="Enter your name"
@@ -53,23 +62,23 @@ export default function Register() {
                      type="checkbox"
                      label="I agree to the terms & conditions"
                   />
-                  <button type="submit" class="btn btn-main btn-lg w-100 pill">
+                  <button type="submit" className="btn btn-main btn-lg w-100 pill">
                      {" "}
                      Sign up
                   </button>
                   <button
                      type="submit"
-                     class="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
-                     <span class="icon icon-left">
+                     className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
+                     <span className="icon icon-left">
                         <Image width={25} height={25} src={googleIcon} alt="" />
                      </span>
                      Sign up with google
                   </button>
-                  <div class="have-account mt-3">
-                     <p class="text font-14">
+                  <div className="have-account mt-3">
+                     <p className="text font-14">
                         Already a member?{" "}
                         <Link
-                           class="link text-main text-decoration-underline  fw-500"
+                           className="link text-main text-decoration-underline  fw-500"
                            href="/login">
                            Sign In
                         </Link>
