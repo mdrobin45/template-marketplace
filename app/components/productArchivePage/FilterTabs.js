@@ -1,14 +1,14 @@
 export default function FilterTabs() {
    return (
-      <div class="col-lg-12">
-         <div class="filter-tab gap-3 flx-between">
+      <div className="col-lg-12">
+         <div className="filter-tab gap-3 flx-between">
             <ul
-               class="nav common-tab nav-pills mb-0 gap-lg-2 gap-1 ms-lg-auto"
+               className="nav common-tab nav-pills mb-0 gap-lg-2 gap-1 ms-lg-auto"
                id="pills-tab"
                role="tablist">
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link active"
+                     className="nav-link active"
                      id="pills-product-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-product"
@@ -19,9 +19,9 @@ export default function FilterTabs() {
                      All Item
                   </button>
                </li>
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link"
+                     className="nav-link"
                      id="pills-bestMatch-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-bestMatch"
@@ -32,9 +32,9 @@ export default function FilterTabs() {
                      Best Match
                   </button>
                </li>
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link"
+                     className="nav-link"
                      id="pills-bestRating-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-bestRating"
@@ -45,9 +45,9 @@ export default function FilterTabs() {
                      Best Rating
                   </button>
                </li>
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link"
+                     className="nav-link"
                      id="pills-trending-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-trending"
@@ -58,9 +58,9 @@ export default function FilterTabs() {
                      Site Template
                   </button>
                </li>
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link"
+                     className="nav-link"
                      id="pills-bestOffers-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-bestOffers"
@@ -71,9 +71,9 @@ export default function FilterTabs() {
                      Best Offers
                   </button>
                </li>
-               <li class="nav-item" role="presentation">
+               <li className="nav-item" role="presentation">
                   <button
-                     class="nav-link"
+                     className="nav-link"
                      id="pills-bestSelling-tab"
                      data-bs-toggle="pill"
                      data-bs-target="#pills-bestSelling"

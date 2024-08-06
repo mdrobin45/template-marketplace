@@ -9,11 +9,11 @@ export default function Process({
    url,
 }) {
    return (
-      <li class={`process-list__item ${activeClass && activeClass}`}>
-         <Link href={url} class="process-list__link">
-            <div class="icons">
+      <li className={`process-list__item ${activeClass && activeClass}`}>
+         <Link href={url} className="process-list__link">
+            <div className="icons">
                {whiteIcon ? (
-                  <span class="icon white">
+                  <span className="icon white">
                      <Image
                         width={40}
                         height={40}
@@ -26,7 +26,7 @@ export default function Process({
                )}
 
                {colorIcon ? (
-                  <span class="icon colored">
+                  <span className="icon colored">
                      <Image
                         width={40}
                         height={40}
@@ -38,7 +38,7 @@ export default function Process({
                   ""
                )}
             </div>
-            <span class="text">{title}</span>
+            <span className="text">{title}</span>
          </Link>
       </li>
    );

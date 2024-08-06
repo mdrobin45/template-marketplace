@@ -19,11 +19,11 @@ export default function CheckoutBanner({
    orderActive,
 }) {
    return (
-      <section class="breadcrumb breadcrumb-four padding-static-y-60 section-bg position-relative z-index-1 overflow-hidden">
+      <section className="breadcrumb breadcrumb-four padding-static-y-60 section-bg position-relative z-index-1 overflow-hidden">
          <Image
             src={bannerBg}
             alt=""
-            class="bg--gradient"
+            className="bg--gradient"
             width={300}
             height={300}
          />
@@ -31,28 +31,28 @@ export default function CheckoutBanner({
          <Image
             src={shape1}
             alt=""
-            class="element one"
+            className="element one"
             width={90}
             height={90}
          />
          <Image
             src={shape2}
             alt=""
-            class="element three"
+            className="element three"
             width={90}
             height={90}
          />
 
-         <div class="container container-two">
-            <div class="row justify-content-center">
-               <div class="col-lg-12">
-                  <div class="breadcrumb-four-content">
-                     <h3 class="breadcrumb-one-content__title text-center mb-3 text-capitalize">
+         <div className="container container-two">
+            <div className="row justify-content-center">
+               <div className="col-lg-12">
+                  <div className="breadcrumb-four-content">
+                     <h3 className="breadcrumb-one-content__title text-center mb-3 text-capitalize">
                         Shopping Cart
                      </h3>
                      {/* <Breadcrumb breadcrumbs={["Home"]} /> */}
 
-                     <ul class="process-list">
+                     <ul className="process-list">
                         <Process
                            url="/cart"
                            whiteIcon={cartIconWhite}

@@ -7,9 +7,9 @@ export default function ProductArchive() {
    return (
       <>
          <ArchiveTopSection />
-         <section class="all-product padding-y-120">
-            <div class="container container-two">
-               <div class="row">
+         <section className="all-product padding-y-120">
+            <div className="container container-two">
+               <div className="row">
                   <FilterTabs />
                   <SidebarProductArchive />
                   <ArchiveTabContent />

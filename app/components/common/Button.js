@@ -7,7 +7,7 @@ export default function Button({ url, label, secondary, children, size }) {
             size === "small" ? (
                <Link
                   href={url}
-                  class="btn btn-outline-light flx-align gap-2 pill btn-lg">
+                  className="btn btn-outline-light flx-align gap-2 pill btn-lg">
                   {children ? (
                      <span className="icon-left icon">{children}</span>
                   ) : (
@@ -19,7 +19,7 @@ export default function Button({ url, label, secondary, children, size }) {
             ) : (
                <Link
                   href={url}
-                  class="btn btn-outline-light flx-align gap-2 pill btn-lg py-3 px-5">
+                  className="btn btn-outline-light flx-align gap-2 pill btn-lg py-3 px-5">
                   {children ? (
                      <span className="icon-left icon">{children}</span>
                   ) : (
@@ -30,7 +30,9 @@ export default function Button({ url, label, secondary, children, size }) {
                </Link>
             )
          ) : size === "small" ? (
-            <Link href={url} class="btn btn-main flx-align gap-2 pill btn-lg">
+            <Link
+               href={url}
+               className="btn btn-main flx-align gap-2 pill btn-lg">
                {children ? (
                   <span className="icon-left icon">{children}</span>
                ) : (
@@ -41,7 +43,7 @@ export default function Button({ url, label, secondary, children, size }) {
          ) : (
             <Link
                href={url}
-               class="btn btn-main flx-align gap-2 pill btn-lg py-3 px-5">
+               className="btn btn-main flx-align gap-2 pill btn-lg py-3 px-5">
                {children ? (
                   <span className="icon-left icon">{children}</span>
                ) : (

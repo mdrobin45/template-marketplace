@@ -11,9 +11,9 @@ export default function Profile() {
    return (
       <>
          <TopAreaProfile />
-         <section class="profile pt-5 padding-b-120">
-            <div class="container container-two">
-               <div class="tab-content" id="pills-tabb">
+         <section className="profile pt-5 padding-b-120">
+            <div className="container container-two">
+               <div className="tab-content" id="pills-tabb">
                   <ProfileInfo />
                   <Templates />
                   <Settings />

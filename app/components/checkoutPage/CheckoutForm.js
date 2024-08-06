@@ -4,12 +4,12 @@ import CheckoutSidebar from "./CheckoutSidebar";
 
 export default function CheckoutForm() {
    return (
-      <section class="cart-personal padding-y-120">
-         <div class="container container-two">
-            <div class="row gy-5">
-               <div class="col-lg-8 pe-sm-5">
-                  <div class="cart-personal__content">
-                     <h5 class="cart-personal__title mb-32 fw-bold">
+      <section className="cart-personal padding-y-120">
+         <div className="container container-two">
+            <div className="row gy-5">
+               <div className="col-lg-8 pe-sm-5">
+                  <div className="cart-personal__content">
+                     <h5 className="cart-personal__title mb-32 fw-bold">
                         Personal information
                      </h5>
                      <form action="#">
@@ -38,7 +38,7 @@ export default function CheckoutForm() {
                            label="Last Name"
                         />
 
-                        <div class="mt-32 mb-32">
+                        <div className="mt-32 mb-32">
                            <InputField
                               name="term"
                               required={true}
@@ -50,21 +50,21 @@ export default function CheckoutForm() {
                      </form>
                   </div>
 
-                  <form action="#" class="apply-coupon flx-align gap-3">
+                  <form action="#" className="apply-coupon flx-align gap-3">
                      <input
                         type="text"
-                        class="common-input common-input--md w-auto pill"
+                        className="common-input common-input--md w-auto pill"
                         placeholder="Coupon code"
                      />
                      <button
                         type="submit"
-                        class="btn btn-main btn-md py-3 px-sm-5 px-4 flx-align gap-2 pill fw-300">
+                        className="btn btn-main btn-md py-3 px-sm-5 px-4 flx-align gap-2 pill fw-300">
                         {" "}
                         Apply
                      </button>
                   </form>
 
-                  <div class="cart-content__bottom flx-between gap-2">
+                  <div className="cart-content__bottom flx-between gap-2">
                      <Button secondary={true} label="Back" url="/cart" />
                      <Button
                         label="Proceed to Payment"

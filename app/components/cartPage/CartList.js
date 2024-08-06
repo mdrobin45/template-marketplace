@@ -2,11 +2,11 @@ import Button from "components/common/Button";
 
 export default function CartList() {
    return (
-      <div class="cart padding-y-120">
-         <div class="container">
-            <div class="cart-content">
-               <div class="table-responsive">
-                  <table class="table style-two">
+      <div className="cart padding-y-120">
+         <div className="container">
+            <div className="cart-content">
+               <div className="table-responsive">
+                  <table className="table style-two">
                      <thead>
                         <tr>
                            <th>Product Details</th>
@@ -18,58 +18,58 @@ export default function CartList() {
                      <tbody>
                         <tr>
                            <td>
-                              <div class="cart-item">
-                                 <div class="d-flex align-items-center gap-3">
-                                    <div class="cart-item__thumb">
+                              <div className="cart-item">
+                                 <div className="d-flex align-items-center gap-3">
+                                    <div className="cart-item__thumb">
                                        <a
                                           href="product-details.html"
-                                          class="link">
+                                          className="link">
                                           <img
                                              src="assets/images/thumbs/product-img2.png"
                                              alt=""
-                                             class="cover-img"
+                                             className="cover-img"
                                           />
                                        </a>
                                     </div>
-                                    <div class="cart-item__content">
-                                       <h6 class="cart-item__title font-heading fw-700 text-capitalize font-18 mb-4">
+                                    <div className="cart-item__content">
+                                       <h6 className="cart-item__title font-heading fw-700 text-capitalize font-18 mb-4">
                                           <a
                                              href="product-details.html"
-                                             class="link">
+                                             className="link">
                                              Digital product name here
                                           </a>
                                        </h6>
-                                       <span class="cart-item__price font-18 text-heading fw-500">
+                                       <span className="cart-item__price font-18 text-heading fw-500">
                                           Category:
-                                          <span class="text-body font-14">
+                                          <span className="text-body font-14">
                                              WordPress
                                           </span>
                                        </span>
                                     </div>
                                  </div>
-                                 <div class="flx-align gap-4 mt-3 mt-lg-4">
-                                    <div class="flx-align gap-2">
+                                 <div className="flx-align gap-4 mt-3 mt-lg-4">
+                                    <div className="flx-align gap-2">
                                        <button
                                           type="button"
-                                          class="product-card__wishlist style-two">
-                                          <i class="fas fa-heart"></i>
+                                          className="product-card__wishlist style-two">
+                                          <i className="fas fa-heart"></i>
                                        </button>
-                                       <span class="text-body">
+                                       <span className="text-body">
                                           Add to wishlist
                                        </span>
                                     </div>
                                     <button
                                        type="button"
-                                       class="rounded-btn delete-btn text-danger hover-text-decoration-underline">
+                                       className="rounded-btn delete-btn text-danger hover-text-decoration-underline">
                                        Remove
                                     </button>
                                  </div>
                               </div>
                            </td>
                            <td>
-                              <div class="cart-item__count">
+                              <div className="cart-item__count">
                                  <button data-decrease="data-decrease">
-                                    <i class="fas fa-minus"></i>
+                                    <i className="fas fa-minus"></i>
                                  </button>
                                  <input
                                     data-value="data-value"
@@ -77,17 +77,17 @@ export default function CartList() {
                                     value="2"
                                  />
                                  <button data-increase="data-increase">
-                                    <i class="fas fa-plus"></i>
+                                    <i className="fas fa-plus"></i>
                                  </button>
                               </div>
                            </td>
                            <td>
-                              <span class="cart-item__totalPrice text-body font-18 fw-400 mb-0">
+                              <span className="cart-item__totalPrice text-body font-18 fw-400 mb-0">
                                  $28.00
                               </span>
                            </td>
                            <td>
-                              <span class="cart-item__totalPrice text-body font-18 fw-400 mb-0">
+                              <span className="cart-item__totalPrice text-body font-18 fw-400 mb-0">
                                  $56.00
                               </span>
                            </td>
@@ -96,7 +96,7 @@ export default function CartList() {
                   </table>
                </div>
 
-               <div class="cart-content__bottom flx-between gap-2">
+               <div className="cart-content__bottom flx-between gap-2">
                   <Button
                      secondary={true}
                      label="Continue Shopping"
