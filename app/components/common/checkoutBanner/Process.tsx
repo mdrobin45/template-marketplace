@@ -1,13 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface ProcessPropsType {
+   colorIcon?:string,
+   whiteIcon?:string,
+   activeClass:string,
+   title:string,
+   url:string,
+}
 export default function Process({
    colorIcon,
    whiteIcon,
    activeClass,
    title,
    url,
-}) {
+}:ProcessPropsType) {
    return (
       <li className={`process-list__item ${activeClass && activeClass}`}>
          <Link href={url} className="process-list__link">

@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-export default function Button({ url, label, secondary, children, size }) {
+interface ButtonPropsType{
+   url:string, label:string, secondary?:boolean, children?:string, size?:string
+}
+export default function Button({ url, label, secondary, children, size }:ButtonPropsType) {
    return (
       <>
          {secondary ? (

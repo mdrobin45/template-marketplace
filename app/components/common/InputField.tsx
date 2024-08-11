@@ -3,7 +3,7 @@ interface InputPropsType {
    type: string,
    name: string,
    label: string,
-   required: boolean,
+   required?: boolean,
    id: string,
    placeholder?:string
 }

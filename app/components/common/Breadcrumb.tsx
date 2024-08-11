@@ -1,4 +1,12 @@
-export default function Breadcrumb({ breadcrumbs }) {
+interface BreadcrumbItems {
+   label: string,
+   url:string
+}
+
+interface BreadcrumbProps{
+   breadcrumbs: BreadcrumbItems[];
+}
+export default function Breadcrumb({ breadcrumbs }:BreadcrumbProps) {
    return (
       <>
          <ul className="breadcrumb-list flx-align justify-content-center gap-2 mb-2">

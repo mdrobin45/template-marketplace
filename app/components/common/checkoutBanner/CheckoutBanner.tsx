@@ -12,12 +12,18 @@ import Image from "next/image";
 import "../../style.css";
 import Process from "./Process";
 
+interface BannerPropsType{
+   cartActive?:boolean,
+   mailActive?:boolean,
+   paymentActive?:boolean,
+   orderActive?:boolean,
+}
 export default function CheckoutBanner({
    cartActive,
    mailActive,
    paymentActive,
    orderActive,
-}) {
+}:BannerPropsType) {
    return (
       <section className="breadcrumb breadcrumb-four padding-static-y-60 section-bg position-relative z-index-1 overflow-hidden">
          <Image

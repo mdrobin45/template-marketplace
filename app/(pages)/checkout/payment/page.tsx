@@ -36,7 +36,7 @@ export default function PaymentMethods() {
                               <div className="row gy-4">
                                  <div className="col-lg-12">
                                     <label
-                                       for="nmbr"
+                                       htmlFor="nmbr"
                                        className="form-label mb-2 font-18 font-heading fw-600">
                                        Card Number
                                     </label>
@@ -51,7 +51,7 @@ export default function PaymentMethods() {
                                  </div>
                                  <div className="col-lg-12">
                                     <label
-                                       for="holder"
+                                       htmlFor="holder"
                                        className="form-label mb-2 font-18 font-heading fw-600">
                                        Card Holder
                                     </label>
@@ -66,7 +66,7 @@ export default function PaymentMethods() {
                                  </div>
                                  <div className="col-lg-6">
                                     <label
-                                       for="expire"
+                                       htmlFor="expire"
                                        className="form-label mb-2 font-18 font-heading fw-600">
                                        Expire Date
                                     </label>
@@ -81,7 +81,7 @@ export default function PaymentMethods() {
                                  </div>
                                  <div className="col-lg-6">
                                     <label
-                                       for="CVV"
+                                       htmlFor="CVV"
                                        className="form-label mb-2 font-18 font-heading fw-600">
                                        CVV
                                     </label>
@@ -104,7 +104,7 @@ export default function PaymentMethods() {
                                        />
                                        <label
                                           className="form-check-label mb-0 fw-400 font-16 text-body"
-                                          for="agree">
+                                          htmlFor="agree">
                                           Save my details for future purchase
                                        </label>
                                     </div>
