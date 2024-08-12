@@ -51,8 +51,8 @@ export default function FeaturedAuthor() {
       <>
          <section className="top-author padding-y-120 section-bg position-relative z-index-1">
             <Image
-               width="auto"
-               height="auto"
+               width={300}
+               height={300}
                src={sectionBg}
                alt=""
                className="bg--gradient white-version"

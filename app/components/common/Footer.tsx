@@ -3,6 +3,10 @@ import logo from "@/assets/images/logo/white-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
+interface linkTypes{
+   linkUrl: string,
+   linkText:string
+}
 // Social links
 const socialList = [
    {
@@ -24,7 +28,7 @@ const socialList = [
 ];
 
 // Useful links
-const useFullLinks = [
+const useFullLinks:linkTypes[] = [
    {
       linkUrl: "#",
       linkText: "Product",
@@ -48,7 +52,7 @@ const useFullLinks = [
 ];
 
 // Useful links
-const quickLinks = [
+const quickLinks:linkTypes[] = [
    {
       linkUrl: "#",
       linkText: "Product",

@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-const categories = [
+interface CategoriesItemType{
+   title: string,
+   totalCount: number,
+   image: string
+}
+const categories:CategoriesItemType[] = [
    {
       title: "WordPress",
       totalCount: 12900,

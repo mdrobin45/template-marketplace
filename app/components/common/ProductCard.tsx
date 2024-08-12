@@ -1,6 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function ProductCard({ product, extraClass }) {
+interface ProductInfoType{
+   thumbnail:string,
+   name:string,
+   _id:string,
+   category:string,
+   salePrice:number,
+   regularPrice:number,
+   totalSales:number,
+   ratingCount:number,
+   liveURL:string
+}
+interface ProductCardPropsType{
+   product: ProductInfoType,
+   extraClass?:string
+}
+export default function ProductCard({ product, extraClass }:ProductCardPropsType) {
    return (
       <div className={`product-card ${extraClass && extraClass}`}>
          <div className="product-card__thumb d-flex">
@@ -69,11 +85,11 @@ export default function ProductCard({ product, extraClass }) {
                      </span>
                   </div>
                </div>
-               <a
+               <Link
                   href={product?.liveURL}
                   className="btn btn-outline-light btn-sm pill">
                   Live Demo
-               </a>
+               </Link>
             </div>
          </div>
       </div>

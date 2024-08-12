@@ -5,6 +5,7 @@ import brand4 from "@/assets/images/thumbs/brand-img4.png";
 import Image from "next/image";
 
 const brandLogo = [brand1, brand2, brand3, brand4];
+
 export default function Brand() {
    return (
       <div className="brand">

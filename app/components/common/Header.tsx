@@ -4,7 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
-const menu = [
+interface SubmenuItems{
+   linkText: string,
+   linkURL:string
+}
+
+interface MainMenuItems{
+   linkText: string,
+   linkURL: string,
+   submenu:false | SubmenuItems[]
+}
+const menu:MainMenuItems[] = [
    {
       linkText: "Home",
       linkURL: "/",

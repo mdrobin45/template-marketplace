@@ -1,7 +1,8 @@
 import Link from "next/link";
+import React from "react";
 
 interface ButtonPropsType{
-   url:string, label:string, secondary?:boolean, children?:string, size?:string
+   url:string, label:string, secondary?:boolean, children?:React.ReactNode, size?:string
 }
 export default function Button({ url, label, secondary, children, size }:ButtonPropsType) {
    return (

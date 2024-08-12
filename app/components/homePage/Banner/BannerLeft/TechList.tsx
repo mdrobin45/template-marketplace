@@ -10,11 +10,12 @@ import TechIcon7 from "@/assets/images/thumbs/tech-icon7.png";
 import TechIcon8 from "@/assets/images/thumbs/tech-icon8.png";
 import TechIcon9 from "@/assets/images/thumbs/tech-icon9.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TechList() {
    return (
       <div className="tech-list">
-         <a
+         <Link
             href="all-product.html"
             className="tech-list__item"
             data-bs-toggle="tooltip"
@@ -34,7 +35,7 @@ export default function TechList() {
                alt=""
                className="dark-version"
             />
-         </a>
+         </Link>
          <a
             href="all-product.html"
             className="tech-list__item"

@@ -7,7 +7,7 @@ export default function ArchiveTabContent() {
                id="pills-product"
                role="tabpanel"
                aria-labelledby="pills-product-tab"
-               tabindex="0">
+               tabIndex={0}>
                <div className="row gy-4 list-grid-wrapper">
                   <div className="col-xl-4 col-sm-6">
                      <div className="product-card section-bg">
