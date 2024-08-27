@@ -87,7 +87,7 @@ export default function SidebarProductArchive() {
                                  name="radio"
                                  id="veiwAll"
                               />
-                              <label className="form-check-label" for="veiwAll">
+                              <label className="form-check-label" htmlFor="veiwAll">
                                  {" "}
                                  View All
                               </label>
@@ -104,7 +104,7 @@ export default function SidebarProductArchive() {
                                  name="radio"
                                  id="oneStar"
                               />
-                              <label className="form-check-label" for="oneStar">
+                              <label className="form-check-label" htmlFor="oneStar">
                                  {" "}
                                  1 Star and above
                               </label>
@@ -121,7 +121,7 @@ export default function SidebarProductArchive() {
                                  name="radio"
                                  id="twoStar"
                               />
-                              <label className="form-check-label" for="twoStar">
+                              <label className="form-check-label" htmlFor="twoStar">
                                  {" "}
                                  2 Star and above
                               </label>
@@ -140,7 +140,7 @@ export default function SidebarProductArchive() {
                               />
                               <label
                                  className="form-check-label"
-                                 for="threeStar">
+                                 htmlFor="threeStar">
                                  {" "}
                                  3 Star and above
                               </label>
@@ -159,7 +159,7 @@ export default function SidebarProductArchive() {
                               />
                               <label
                                  className="form-check-label"
-                                 for="fourStar">
+                                 htmlFor="fourStar">
                                  {" "}
                                  4 Star and above
                               </label>
@@ -178,7 +178,7 @@ export default function SidebarProductArchive() {
                               />
                               <label
                                  className="form-check-label"
-                                 for="fiveStar">
+                                 htmlFor="fiveStar">
                                  {" "}
                                  5 Star Rating
                               </label>

@@ -12,7 +12,7 @@ import { getFeaturedAuthor } from "utils/api";
 
 export default function FeaturedAuthor() {
    useEffect(() => {
-      const text = document.querySelector(".circle__text");
+      const text = document.querySelector<HTMLDivElement>(".circle__text");
 
       if (text) {
          text.innerHTML = text.innerText
@@ -27,7 +27,7 @@ export default function FeaturedAuthor() {
       }
 
       // Text Two
-      const textTwo = document.querySelector(".circle__desc");
+      const textTwo = document.querySelector<HTMLDivElement>(".circle__desc");
 
       if (textTwo) {
          textTwo.innerHTML = textTwo.innerText

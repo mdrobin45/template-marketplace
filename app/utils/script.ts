@@ -1,7 +1,6 @@
-// ========================= Text Rotation Js Start ==========================
+
 export function textRotate() {
-   const text = document.querySelector(".circle__text");
-   console.log(text);
+   const text = document.querySelector<HTMLDivElement>(".circle__text");
 
    if (text) {
       text.innerHTML = text.innerText
@@ -14,7 +13,7 @@ export function textRotate() {
    }
 
    // Text Two
-   const textTwo = document.querySelector(".circle__desc");
+   const textTwo = document.querySelector<HTMLDivElement>(".circle__desc");
 
    if (textTwo) {
       textTwo.innerHTML = textTwo.innerText
@@ -25,5 +24,4 @@ export function textRotate() {
          )
          .join("");
    }
-   // ========================= Text Rotation Js End ==========================
 }

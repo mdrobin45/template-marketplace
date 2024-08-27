@@ -5,7 +5,7 @@ export default function Statement() {
          id="pills-statement"
          role="tabpanel"
          aria-labelledby="pills-statement-tab"
-         tabindex="0">
+         tabIndex={0}>
          <div className="row gy-4">
             <div className="col-lg-6">
                <div className="statement-item card common-card border border-gray-five">

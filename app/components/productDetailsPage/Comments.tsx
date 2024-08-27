@@ -5,7 +5,7 @@ export default function ProductComments() {
          id="pills-comments"
          role="tabpanel"
          aria-labelledby="pills-comments-tab"
-         tabIndex="0">
+         tabIndex={0}>
          <div className="comment mt-64 mb-64">
             <h5 className="mb-32">2 Comments</h5>
             <ul className="comment-list">

@@ -1,7 +1,7 @@
 import axiosRequest from "./axiosRequest";
 
 // Filter product by category
-export const filterByCategory = async (category) => {
+export const filterByCategory = async (category:string):Promise<any | null> => {
    try {
       const { data } = await axiosRequest.get(
          `/product/filter?category=${category}`
@@ -13,7 +13,7 @@ export const filterByCategory = async (category) => {
 };
 
 // Get featured product
-export const getFeaturedProduct = async () => {
+export const getFeaturedProduct = async ():Promise<any | null> => {
    try {
       const { data } = await axiosRequest.get(`/product/featured`);
       return data;
@@ -23,7 +23,7 @@ export const getFeaturedProduct = async () => {
 };
 
 // Get featured product
-export const getBestSellingProduct = async () => {
+export const getBestSellingProduct = async ():Promise<any | null> => {
    try {
       const { data } = await axiosRequest.get(`/product/best-selling`);
       return data;
@@ -33,7 +33,7 @@ export const getBestSellingProduct = async () => {
 };
 
 // Get featured author
-export const getFeaturedAuthor = async () => {
+export const getFeaturedAuthor = async ():Promise<any | null> => {
    try {
       const { data } = await axiosRequest.get(`/author/featured`);
       return data;

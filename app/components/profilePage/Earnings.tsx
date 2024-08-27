@@ -5,7 +5,7 @@ export default function Earnings() {
          id="pills-earning"
          role="tabpanel"
          aria-labelledby="pills-earning-tab"
-         tabindex="0">
+         tabIndex={0}>
          <div className="row gy-4">
             <div className="col-lg-4 col-sm-6">
                <div className="earning-card position-relative z-index-1">

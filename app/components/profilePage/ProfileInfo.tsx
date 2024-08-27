@@ -7,7 +7,7 @@ export default function ProfileInfo() {
          id="pills-profile"
          role="tabpanel"
          aria-labelledby="pills-profile-tab"
-         tabindex="0">
+         tabIndex={0}>
          <div className="profile-wrapper">
             <div className="profile-content">
                <div className="profile-content__inner">

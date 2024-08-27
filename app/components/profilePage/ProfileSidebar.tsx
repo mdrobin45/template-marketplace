@@ -160,7 +160,7 @@ export default function ProfileSidebar() {
                <div className="row gy-4">
                   <div className="col-12">
                      <label
-                        for="emailsId"
+                        htmlFor="emailsId"
                         className="form-label mb-2 font-18 fw-500">
                         Email
                      </label>
@@ -173,7 +173,7 @@ export default function ProfileSidebar() {
                   </div>
                   <div className="col-12">
                      <label
-                        for="messagesId"
+                        htmlFor="messagesId"
                         className="form-label mb-2 font-18 fw-500">
                         Message
                      </label>

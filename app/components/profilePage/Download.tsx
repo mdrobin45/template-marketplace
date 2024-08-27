@@ -5,7 +5,7 @@ export default function Download() {
          id="pills-download"
          role="tabpanel"
          aria-labelledby="pills-download-tab"
-         tabindex="0">
+         tabIndex={0}>
          <div className="row gy-4">
             <div className="col-lg-12">
                <div className="search-box">
@@ -51,7 +51,7 @@ export default function Download() {
                               />
                               <label
                                  className="form-check-label text-body fw-400 mb-0"
-                                 for="notifiedd">
+                                 htmlFor="notifiedd">
                                  Get notified by email if this item is updated
                               </label>
                            </div>
@@ -115,7 +115,7 @@ export default function Download() {
                               />
                               <label
                                  className="form-check-label text-body fw-400 mb-0"
-                                 for="notified">
+                                 htmlFor="notified">
                                  Get notified by email if this item is updated
                               </label>
                            </div>
@@ -179,7 +179,7 @@ export default function Download() {
                               />
                               <label
                                  className="form-check-label text-body fw-400 mb-0"
-                                 for="notifiedddd">
+                                 htmlFor="notifiedddd">
                                  Get notified by email if this item is updated
                               </label>
                            </div>
@@ -243,7 +243,7 @@ export default function Download() {
                               />
                               <label
                                  className="form-check-label text-body fw-400 mb-0"
-                                 for="notifieds">
+                                 htmlFor="notifieds">
                                  Get notified by email if this item is updated
                               </label>
                            </div>

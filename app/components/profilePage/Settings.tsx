@@ -65,7 +65,7 @@ export default function Settings() {
                         <div className="card-body">
                            <div className="row gy-3">
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="fName" className="form-label">
+                                 <label htmlFor="fName" className="form-label">
                                     First Name
                                  </label>
                                  <input
@@ -75,7 +75,7 @@ export default function Settings() {
                                  />
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="lName" className="form-label">
+                                 <label htmlFor="lName" className="form-label">
                                     Last Name
                                  </label>
                                  <input
@@ -85,7 +85,7 @@ export default function Settings() {
                                  />
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="country" className="form-label">
+                                 <label htmlFor="country" className="form-label">
                                     Country
                                  </label>
                                  <input
@@ -95,7 +95,7 @@ export default function Settings() {
                                  />
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="address" className="form-label">
+                                 <label htmlFor="address" className="form-label">
                                     Address
                                  </label>
                                  <input
@@ -105,7 +105,7 @@ export default function Settings() {
                                  />
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="city" className="form-label">
+                                 <label htmlFor="city" className="form-label">
                                     City
                                  </label>
                                  <input
@@ -115,7 +115,7 @@ export default function Settings() {
                                  />
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="zipCode" className="form-label">
+                                 <label htmlFor="zipCode" className="form-label">
                                     Zip Code
                                  </label>
                                  <input
@@ -136,7 +136,7 @@ export default function Settings() {
                         <div className="card-body">
                            <div className="row gy-3">
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="fileUpload" className="form-label">
+                                 <label htmlFor="fileUpload" className="form-label">
                                     Upload a New Avatar
                                  </label>
                                  <input
@@ -147,7 +147,7 @@ export default function Settings() {
                               </div>
                               <div className="col-sm-6 col-xs-6">
                                  <label
-                                    for="fileUploadTwo"
+                                    htmlFor="fileUploadTwo"
                                     className="form-label">
                                     Upload a New Avatar
                                  </label>
@@ -159,7 +159,7 @@ export default function Settings() {
                               </div>
                               <div className="col-sm-6 col-xs-6">
                                  <label
-                                    for="ProfileHeading"
+                                    htmlFor="ProfileHeading"
                                     className="form-label">
                                     Profile Heading
                                  </label>
@@ -183,7 +183,7 @@ export default function Settings() {
                                        />
                                        <label
                                           className="form-check-label ps-2"
-                                          for="yes">
+                                          htmlFor="yes">
                                           Yes
                                        </label>
                                     </div>
@@ -196,7 +196,7 @@ export default function Settings() {
                                        />
                                        <label
                                           className="form-check-label ps-2"
-                                          for="no">
+                                          htmlFor="no">
                                           No
                                        </label>
                                     </div>
@@ -205,7 +205,7 @@ export default function Settings() {
 
                               <div className="col-sm-12">
                                  <label
-                                    for="aboutProfile"
+                                    htmlFor="aboutProfile"
                                     className="form-label">
                                     Write Something About Your Profile
                                  </label>
@@ -235,7 +235,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment1">
+                                       htmlFor="payment1">
                                        <img
                                           src="assets/images/thumbs/payment-method1.png"
                                           alt=""
@@ -253,7 +253,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment2">
+                                       htmlFor="payment2">
                                        <img
                                           src="assets/images/thumbs/payment-method2.png"
                                           alt=""
@@ -270,7 +270,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment3">
+                                       htmlFor="payment3">
                                        <img
                                           src="assets/images/thumbs/payment-method3.png"
                                           alt=""
@@ -287,7 +287,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment4">
+                                       htmlFor="payment4">
                                        <img
                                           src="assets/images/thumbs/payment-method4.png"
                                           alt=""
@@ -304,7 +304,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment5">
+                                       htmlFor="payment5">
                                        <img
                                           src="assets/images/thumbs/payment-method5.png"
                                           alt=""
@@ -321,7 +321,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment6">
+                                       htmlFor="payment6">
                                        <img
                                           src="assets/images/thumbs/payment-method6.png"
                                           alt=""
@@ -338,7 +338,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment7">
+                                       htmlFor="payment7">
                                        <img
                                           src="assets/images/thumbs/payment-method7.png"
                                           alt=""
@@ -355,7 +355,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment8">
+                                       htmlFor="payment8">
                                        <img
                                           src="assets/images/thumbs/payment-method8.png"
                                           alt=""
@@ -372,7 +372,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment9">
+                                       htmlFor="payment9">
                                        <img
                                           src="assets/images/thumbs/payment-method9.png"
                                           alt=""
@@ -389,7 +389,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment10">
+                                       htmlFor="payment10">
                                        <img
                                           src="assets/images/thumbs/payment-method10.png"
                                           alt=""
@@ -406,7 +406,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment11">
+                                       htmlFor="payment11">
                                        <img
                                           src="assets/images/thumbs/payment-method11.png"
                                           alt=""
@@ -423,7 +423,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment12">
+                                       htmlFor="payment12">
                                        <img
                                           src="assets/images/thumbs/payment-method12.png"
                                           alt=""
@@ -440,7 +440,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="payment13">
+                                       htmlFor="payment13">
                                        <img
                                           src="assets/images/thumbs/payment-method13.png"
                                           alt=""
@@ -468,7 +468,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="ratingReminder">
+                                       htmlFor="ratingReminder">
                                        Rating reminder send an email for client
                                        rating
                                     </label>
@@ -483,7 +483,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="reviewNotification">
+                                       htmlFor="reviewNotification">
                                        Item review notification
                                     </label>
                                  </div>
@@ -497,7 +497,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="updateNotification">
+                                       htmlFor="updateNotification">
                                        Item update notification
                                     </label>
                                  </div>
@@ -511,7 +511,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="dailyNootification">
+                                       htmlFor="dailyNootification">
                                        Daily update notification
                                     </label>
                                  </div>
@@ -525,7 +525,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="itemNotification">
+                                       htmlFor="itemNotification">
                                        Item Notification
                                     </label>
                                  </div>
@@ -539,7 +539,7 @@ export default function Settings() {
                                     />
                                     <label
                                        className="form-check-label"
-                                       for="commentNotification">
+                                       htmlFor="commentNotification">
                                        Item comment notification
                                     </label>
                                  </div>
@@ -557,7 +557,7 @@ export default function Settings() {
                            <div className="row gy-3">
                               <div className="col-sm-6 col-xs-6">
                                  <label
-                                    for="facebookUrl"
+                                    htmlFor="facebookUrl"
                                     className="form-label">
                                     Facebook Profile Url
                                  </label>
@@ -575,7 +575,7 @@ export default function Settings() {
                               </div>
                               <div className="col-sm-6 col-xs-6">
                                  <label
-                                    for="linkedinUrl"
+                                    htmlFor="linkedinUrl"
                                     className="form-label">
                                     Linkedin Profile Url
                                  </label>
@@ -592,7 +592,7 @@ export default function Settings() {
                                  </div>
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="behanceUrl" className="form-label">
+                                 <label htmlFor="behanceUrl" className="form-label">
                                     Behance Profile Url
                                  </label>
                                  <div className="position-relative">
@@ -608,7 +608,7 @@ export default function Settings() {
                                  </div>
                               </div>
                               <div className="col-sm-6 col-xs-6">
-                                 <label for="dribbleUrl" className="form-label">
+                                 <label htmlFor="dribbleUrl" className="form-label">
                                     Dribble Profile Url
                                  </label>
                                  <div className="position-relative">
