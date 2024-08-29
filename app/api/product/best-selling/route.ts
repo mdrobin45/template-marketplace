@@ -1,13 +1,14 @@
-import Product from "model/product";
+import BestSellingProduct from "model/bestSelling";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 
+// GET Request
 export async function GET() {
    try {
       await dbConnect();
 
-      const data = await Product.find();
-      return NextResponse.json(data, { status: 200 });
+      const data = await BestSellingProduct.find().populate("template");
+      return NextResponse.json(data);
    } catch (error) {
       return NextResponse.json(
          {
@@ -25,11 +26,18 @@ export async function POST(request: Request) {
 
       const data = await request.json();
 
-      const res = await new Product(data).save();
-      return NextResponse.json(
-         { id: res._id, message: "Inserted" },
-         { status: 200 }
-      );
+      if (data.template) {
+         const res = await new BestSellingProduct(data).save();
+         return NextResponse.json(
+            { id: res._id, message: "Inserted" },
+            { status: 200 }
+         );
+      } else {
+         return NextResponse.json(
+            { message: "Template id not found" },
+            { status: 404 }
+         );
+      }
    } catch (error) {
       return NextResponse.json(
          {

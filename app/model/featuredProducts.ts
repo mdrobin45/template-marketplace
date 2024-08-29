@@ -12,10 +12,12 @@ const featuredProductSchema = new mongoose.Schema(
    { timestamps: true }
 );
 
+// Initialize product model
 Product;
 
+// Initialize Featured product model
 const FeaturedProduct =
-   mongoose.models.featuredProduct ||
-   mongoose.model("featuredProduct", featuredProductSchema);
+   mongoose.models.FeaturedProduct ||
+   mongoose.model("FeaturedProduct", featuredProductSchema);
 
 export default FeaturedProduct;

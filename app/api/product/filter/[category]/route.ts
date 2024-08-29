@@ -13,9 +13,14 @@ export async function GET(request: Request, { params }) {
          return NextResponse.json(data);
       } else {
          const data = await Product.find({ category: category });
-         return NextResponse.json(data);
+         return NextResponse.json(data, { status: 200 });
       }
-   } catch {
-      return NextResponse.json({ error: "Internal Server Error" });
+   } catch (error) {
+      return NextResponse.json(
+         {
+            message: error.message,
+         },
+         { status: 500 }
+      );
    }
 }
