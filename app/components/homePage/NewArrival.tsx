@@ -26,12 +26,14 @@ const tabs = [
       name: "javascript",
    },
 ];
+
 export default function NewArrival() {
    const [category, setCategory] = useState("all");
    const { data, isPending } = useQuery({
       queryKey: ["filterByCategory", category],
       queryFn: () => filterByCategory(category),
    });
+
    return (
       <section className="arrival-product padding-y-120 section-bg position-relative z-index-1">
          <Image
