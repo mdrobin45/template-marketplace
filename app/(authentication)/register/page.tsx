@@ -2,18 +2,10 @@
 import googleIcon from "@/assets/images/icons/google.svg";
 import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
 import InputField from "components/common/InputField";
-import authUserSignUp from "modules/auth-signup-password";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Register() {
-   const formSubmission = (e) => {
-      e.preventDefault();
-      const { email, password } = e.target;
-      authUserSignUp(email.value, password.value).then((res) =>
-         console.log(res)
-      );
-   };
    return (
       <section className="account d-flex">
          <div className="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
@@ -30,7 +22,7 @@ export default function Register() {
                   Create A Free Account
                </h4>
                <p className="mb-3">Welcome back! please enter your detail</p>
-               <form onSubmit={formSubmission}>
+               <form>
                   <InputField
                      name="name"
                      placeholder="Enter your name"
@@ -62,7 +54,9 @@ export default function Register() {
                      type="checkbox"
                      label="I agree to the terms & conditions"
                   />
-                  <button type="submit" className="btn btn-main btn-lg w-100 pill">
+                  <button
+                     type="submit"
+                     className="btn btn-main btn-lg w-100 pill">
                      {" "}
                      Sign up
                   </button>

@@ -1,5 +1,6 @@
 import googleIcon from "@/assets/images/icons/google.svg";
 import loginVector from "@/assets/images/thumbs/login-vector.jpg";
+import { googleSignIn } from "actions";
 import InputField from "components/common/InputField";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function Login() {
                   Sign In
                </h4>
                <p className="mb-3">Welcome back! please enter your details</p>
-               <form>
+               <form action={googleSignIn}>
                   <InputField
                      name="email"
                      placeholder="example@mail.com"
@@ -62,12 +63,24 @@ export default function Login() {
                      Sign In
                   </button>
                   <button
+                     name="googleSignInBtn"
+                     value="google"
                      type="submit"
                      className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
                      <span className="icon icon-left">
                         <Image width={25} height={25} src={googleIcon} alt="" />
                      </span>
-                     Sign up with google
+                     Sign In With Google
+                  </button>
+                  <button
+                     name="githubSignInBtn"
+                     value="githubSignIn"
+                     type="submit"
+                     className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
+                     <span className="icon icon-left">
+                        <Image width={25} height={25} src={googleIcon} alt="" />
+                     </span>
+                     Sign In With GitHub
                   </button>
                </form>
                <div className="col-sm-12 mb-0 mt-3">
