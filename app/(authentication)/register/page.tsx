@@ -1,7 +1,8 @@
 "use client";
-import googleIcon from "@/assets/images/icons/google.svg";
 import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
 import InputField from "components/common/InputField";
+import GithubAuth from "components/common/socialAuth/GithubAuth";
+import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -60,14 +61,6 @@ export default function Register() {
                      {" "}
                      Sign up
                   </button>
-                  <button
-                     type="submit"
-                     className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
-                     <span className="icon icon-left">
-                        <Image width={25} height={25} src={googleIcon} alt="" />
-                     </span>
-                     Sign up with google
-                  </button>
                   <div className="have-account mt-3">
                      <p className="text font-14">
                         Already a member?{" "}
@@ -79,6 +72,8 @@ export default function Register() {
                      </p>
                   </div>
                </form>
+               <GoogleAuth />
+               <GithubAuth />
             </div>
          </div>
       </section>

@@ -1,7 +1,8 @@
-import googleIcon from "@/assets/images/icons/google.svg";
 import loginVector from "@/assets/images/thumbs/login-vector.jpg";
 import { googleSignIn } from "actions";
 import InputField from "components/common/InputField";
+import GithubAuth from "components/common/socialAuth/GithubAuth";
+import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,27 +63,9 @@ export default function Login() {
                      {" "}
                      Sign In
                   </button>
-                  <button
-                     name="googleSignInBtn"
-                     value="google"
-                     type="submit"
-                     className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
-                     <span className="icon icon-left">
-                        <Image width={25} height={25} src={googleIcon} alt="" />
-                     </span>
-                     Sign In With Google
-                  </button>
-                  <button
-                     name="githubSignInBtn"
-                     value="githubSignIn"
-                     type="submit"
-                     className="btn mt-4 btn-outline-light btn-lg-icon btn-lg w-100 pill">
-                     <span className="icon icon-left">
-                        <Image width={25} height={25} src={googleIcon} alt="" />
-                     </span>
-                     Sign In With GitHub
-                  </button>
                </form>
+               <GoogleAuth />
+               <GithubAuth />
                <div className="col-sm-12 mb-0 mt-3">
                   <div className="have-account">
                      <p className="text font-14">
