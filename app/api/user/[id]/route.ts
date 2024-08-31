@@ -1,4 +1,4 @@
-import Author from "model/user";
+import User from "model/user";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 
@@ -8,7 +8,7 @@ export async function GET(request: Request, { params }) {
       await dbConnect();
 
       const { id } = params;
-      const data = await Author.findById(id).populate("templates");
+      const data = await User.findById(id).populate("templates");
       return NextResponse.json(data, { status: 200 });
    } catch (error) {
       return NextResponse.json(
