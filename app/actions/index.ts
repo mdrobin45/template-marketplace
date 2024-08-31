@@ -1,6 +1,7 @@
 "use server";
 
 import { signIn } from "auth";
+import { cookies } from "next/headers";
 import { credUserRegister } from "utils/api";
 
 // Google sign in configuration
@@ -22,5 +23,8 @@ export async function credentialSignIn(formData: FormData) {
       email: formData.get("email") as string,
       password: formData.get("password") as string,
    };
-   credUserRegister(credentials);
+   const res = await credUserRegister(credentials);
+
+   // Set jwt token in cookie
+   cookies().set("token", res?.token, { httpOnly: true });
 }

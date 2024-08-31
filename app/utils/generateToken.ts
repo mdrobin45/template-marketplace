@@ -5,6 +5,9 @@ export default async function generateToken(payload: {
    email: string;
    role: string;
 }) {
-   const token = await jwt.sign(payload, process.env.JWT_SECRET);
+   const token = await jwt.sign(
+      { ...payload, exp: Math.floor(Date.now() / 1000) + 60 * 60 },
+      process.env.JWT_SECRET
+   );
    return token;
 }
