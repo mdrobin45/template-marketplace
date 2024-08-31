@@ -13,3 +13,8 @@ export async function githubSignIn(formData: FormData) {
    const provider = formData.get("githubSignInBtn") as string;
    await signIn(provider, { redirectTo: "/" });
 }
+
+// Credential sign in
+export async function credentialSignIn(formData: FormData) {
+   console.log(formData);
+}

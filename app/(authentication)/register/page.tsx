@@ -1,5 +1,6 @@
 "use client";
 import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
+import { credentialSignIn } from "actions";
 import InputField from "components/common/InputField";
 import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
@@ -23,7 +24,7 @@ export default function Register() {
                   Create A Free Account
                </h4>
                <p className="mb-3">Welcome back! please enter your detail</p>
-               <form>
+               <form action={credentialSignIn}>
                   <InputField
                      name="name"
                      placeholder="Enter your name"
