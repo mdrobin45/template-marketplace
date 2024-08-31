@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
          return NextResponse.json(
             { token: token, message: "Registration successful" },
-            { status: 200 }
+            { status: 201 }
          );
       }
    } catch (error) {

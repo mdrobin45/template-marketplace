@@ -37,7 +37,7 @@ export const getBestSellingProduct = async (): Promise<any | null> => {
 // Get featured author
 export const getFeaturedAuthor = async (): Promise<any | null> => {
    try {
-      const { data } = await axiosRequest.get(`/author/featured`);
+      const { data } = await axiosRequest.get(`/user/featured`);
       return data;
    } catch {
       return null;
@@ -51,7 +51,7 @@ export const credUserRegister = async (formData: {
    password: string;
 }): Promise<any | null> => {
    try {
-      const { data } = await axiosRequest.post(`/author`, formData);
+      const { data } = await axiosRequest.post(`/user`, formData);
       return data;
    } catch {
       return null;
