@@ -2,6 +2,7 @@ import Author from "model/user";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 import hashPassword from "utils/encrypt-password";
+import generateToken from "utils/generateToken";
 
 export async function GET() {
    return NextResponse.json(
@@ -15,15 +16,23 @@ export async function POST(request: Request) {
    try {
       await dbConnect();
 
+      // Parse body data
       const data = await request.json();
 
+      // Password encryption and save to DB
       const encryptedPwd = await hashPassword(data?.password);
-
       const res = await new Author({ ...data, password: encryptedPwd }).save();
-      return NextResponse.json(
-         { id: res._id, message: "Registration successful" },
-         { status: 200 }
-      );
+
+      // Jwt token generation
+      if (res) {
+         const { name, email, role } = res;
+         const token = await generateToken({ name, email, role });
+
+         return NextResponse.json(
+            { token: token, message: "Registration successful" },
+            { status: 200 }
+         );
+      }
    } catch (error) {
       return NextResponse.json(
          {

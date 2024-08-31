@@ -10,7 +10,7 @@ const userSchema = new Schema(
       city: { type: String },
       avatar: { type: String },
       description: { type: String },
-      rule: { type: String, default: "customer" },
+      role: { type: String, default: "customer" },
       isFeatured: { type: Boolean, default: false },
       socialLinks: [
          {
