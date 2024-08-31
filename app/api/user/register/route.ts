@@ -13,8 +13,9 @@ export async function POST(request: Request) {
       const data = await request.json();
 
       // Check if user already registered or not
-      const findUser = await User.find({ email: data?.email });
+      const findUser = await User.findOne({ email: data?.email });
       if (findUser) {
+         console.log(findUser);
          return NextResponse.json(
             { message: "This user already registered!" },
             { status: 409 }
