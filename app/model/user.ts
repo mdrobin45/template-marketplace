@@ -1,15 +1,16 @@
 import { Schema, model, models } from "mongoose";
 
-const authorSchema = new Schema(
+const userSchema = new Schema(
    {
-      firstName: { type: String, required: true },
-      lastName: { type: String, required: true },
-      country: { type: String, required: true },
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      avatar: { type: String, required: true },
-      description: { type: String, required: true },
-      rule: { type: String, required: true },
+      name: { type: String, required: true },
+      email: { type: String, required: true },
+      password: { type: String, required: true },
+      country: { type: String },
+      address: { type: String },
+      city: { type: String },
+      avatar: { type: String },
+      description: { type: String },
+      rule: { type: String, default: "customer" },
       isFeatured: { type: Boolean, default: false },
       socialLinks: [
          {
@@ -33,6 +34,6 @@ const authorSchema = new Schema(
    { timestamps: true }
 );
 
-const Author = models.Author || model("Author", authorSchema);
+const User = models.User || model("User", userSchema);
 
-export default Author;
+export default User;

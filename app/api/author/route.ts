@@ -1,4 +1,4 @@
-import Author from "model/author";
+import Author from "model/user";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 
@@ -9,7 +9,7 @@ export async function GET() {
    );
 }
 
-// Insert author
+// Register author
 export async function POST(request: Request) {
    try {
       await dbConnect();
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
       const res = await new Author(data).save();
       return NextResponse.json(
-         { id: res._id, message: "Inserted" },
+         { id: res._id, message: "Registration successful" },
          { status: 200 }
       );
    } catch (error) {

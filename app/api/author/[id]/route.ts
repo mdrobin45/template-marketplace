@@ -1,4 +1,4 @@
-import Author from "model/author";
+import Author from "model/user";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 
