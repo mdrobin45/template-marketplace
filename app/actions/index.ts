@@ -1,6 +1,7 @@
 "use server";
 
 import { signIn } from "auth";
+import { credUserRegister } from "utils/api";
 
 // Google sign in configuration
 export async function googleSignIn(formData: FormData) {
@@ -16,5 +17,10 @@ export async function githubSignIn(formData: FormData) {
 
 // Credential sign in
 export async function credentialSignIn(formData: FormData) {
-   console.log(formData);
+   const credentials = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+   };
+   credUserRegister(credentials);
 }
