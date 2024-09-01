@@ -1,8 +1,6 @@
 "use server";
 
-import { signIn } from "auth";
-import { cookies } from "next/headers";
-import { credUserRegister } from "utils/api";
+import { signIn, signOut } from "auth";
 
 // Google sign in configuration
 export async function googleSignIn(formData: FormData) {
@@ -18,13 +16,14 @@ export async function githubSignIn(formData: FormData) {
 
 // Credential sign in
 export async function credentialSignIn(formData: FormData) {
-   const credentials = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      password: formData.get("password") as string,
-   };
-   const res = await credUserRegister(credentials);
+   await signIn("credentials", {
+      email: formData.get("email"),
+      password: formData.get("password"),
+      redirectTo: "/",
+   });
+}
 
-   // Set jwt token in cookie
-   cookies().set("token", res?.token, { httpOnly: true });
+// Sign Out
+export async function logout() {
+   await signOut();
 }

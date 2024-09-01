@@ -1,5 +1,5 @@
 import loginVector from "@/assets/images/thumbs/login-vector.jpg";
-import { googleSignIn } from "actions";
+import { credentialSignIn } from "actions";
 import InputField from "components/common/InputField";
 import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
@@ -23,7 +23,7 @@ export default function Login() {
                   Sign In
                </h4>
                <p className="mb-3">Welcome back! please enter your details</p>
-               <form action={googleSignIn}>
+               <form action={credentialSignIn}>
                   <InputField
                      name="email"
                      placeholder="example@mail.com"

@@ -2,7 +2,6 @@ import User from "model/user";
 import { NextResponse } from "next/server";
 import dbConnect from "utils/db";
 import hashPassword from "utils/encrypt-password";
-import generateToken from "utils/generateToken";
 
 // Register user
 export async function POST(request: Request) {
@@ -15,7 +14,6 @@ export async function POST(request: Request) {
       // Check if user already registered or not
       const findUser = await User.findOne({ email: data?.email });
       if (findUser) {
-         console.log(findUser);
          return NextResponse.json(
             { message: "This user already registered!" },
             { status: 409 }
@@ -24,18 +22,12 @@ export async function POST(request: Request) {
 
       // Password encryption and save to DB
       const encryptedPwd = await hashPassword(data?.password);
-      const res = await new User({ ...data, password: encryptedPwd }).save();
+      await new User({ ...data, password: encryptedPwd }).save();
 
-      // Jwt token generation
-      if (res) {
-         const { name, email, role } = res;
-         const token = await generateToken({ name, email, role });
-
-         return NextResponse.json(
-            { token: token, message: "Registration successful" },
-            { status: 201 }
-         );
-      }
+      return NextResponse.json(
+         { message: "Registration successful" },
+         { status: 201 }
+      );
    } catch (error) {
       return NextResponse.json(
          {
