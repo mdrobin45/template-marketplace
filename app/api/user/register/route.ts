@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       await new User({ ...data, password: encryptedPwd }).save();
 
       return NextResponse.json(
-         { message: "Registration successful" },
+         { message: "Registration successful", status: 201 },
          { status: 201 }
       );
    } catch (error) {

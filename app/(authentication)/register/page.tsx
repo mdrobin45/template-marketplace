@@ -1,13 +1,31 @@
 "use client";
 import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
-import { credentialSignIn } from "actions";
 import InputField from "components/common/InputField";
 import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { credUserRegister } from "utils/api";
 
 export default function Register() {
+   const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      password: "",
+   });
+
+   const handleFormSubmit = async (e: any) => {
+      e.preventDefault();
+      const formData = new FormData(e.currentTarget);
+
+      const name = formData.get("name") as string;
+      const email = formData.get("email") as string;
+      const password = formData.get("password") as string;
+
+      const signUpRes = await credUserRegister({ name, email, password });
+      console.log(signUpRes.status);
+   };
    return (
       <section className="account d-flex">
          <div className="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
@@ -24,7 +42,7 @@ export default function Register() {
                   Create A Free Account
                </h4>
                <p className="mb-3">Welcome back! please enter your detail</p>
-               <form action={credentialSignIn}>
+               <form onSubmit={handleFormSubmit}>
                   <InputField
                      name="name"
                      placeholder="Enter your name"

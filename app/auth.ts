@@ -33,7 +33,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                if (!isMatched) {
                   throw new Error("Incorrect email or password!");
                }
-               return user;
+               console.log(user);
+               return null;
             } else {
                throw new Error("User not found!");
             }
