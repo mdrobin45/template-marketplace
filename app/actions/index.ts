@@ -20,9 +20,14 @@ export async function credentialSignIn(formData: {
    password: FormDataEntryValue;
 }) {
    try {
-      await signIn("credentials", { ...formData, redirectTo: "/" });
+      await signIn("credentials", {
+         ...formData,
+         redirectTo: "/",
+      });
    } catch (error) {
-      console.log(error);
+      throw error;
+   } finally {
+      return true;
    }
 }
 // Sign Out

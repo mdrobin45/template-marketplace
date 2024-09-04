@@ -6,8 +6,11 @@ import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Login() {
+   const [error, setError] = useState("");
+
    // Handle form submission
    const handleFormSubmit = async (e: any) => {
       e.preventDefault();
@@ -17,9 +20,14 @@ export default function Login() {
 
       try {
          const response = await credentialSignIn({ email, password });
-         console.log(response);
+         if (response) {
+            alert("Succ");
+         }
       } catch (error) {
          console.log(error);
+         if (error) {
+            setError("Incorrect email or password!");
+         }
       }
    };
    return (
@@ -34,6 +42,12 @@ export default function Login() {
          </div>
          <div className="account__right padding-t-120 flx-align">
             <div className="account-content">
+               {error && (
+                  <div className="alert alert-danger" role="alert">
+                     {error}
+                  </div>
+               )}
+
                <h4 className="account-content__title fw-bold text-capitalize">
                   Sign In
                </h4>
