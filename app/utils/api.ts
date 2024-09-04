@@ -53,7 +53,7 @@ export const credUserRegister = async (formData: {
    try {
       const { data } = await axiosRequest.post(`/user/register`, formData);
       return data;
-   } catch {
-      return null;
+   } catch (err) {
+      return err;
    }
 };

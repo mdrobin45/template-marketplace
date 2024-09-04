@@ -5,26 +5,24 @@ import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { credUserRegister } from "utils/api";
 
 export default function Register() {
-   const [formData, setFormData] = useState({
-      name: "",
-      email: "",
-      password: "",
-   });
-
    const handleFormSubmit = async (e: any) => {
       e.preventDefault();
-      const formData = new FormData(e.currentTarget);
 
-      const name = formData.get("name") as string;
-      const email = formData.get("email") as string;
-      const password = formData.get("password") as string;
+      try {
+         const formData = new FormData(e.currentTarget);
 
-      const signUpRes = await credUserRegister({ name, email, password });
-      console.log(signUpRes.status);
+         const name = formData.get("name") as string;
+         const email = formData.get("email") as string;
+         const password = formData.get("password") as string;
+
+         const response = await credUserRegister({ name, email, password });
+         console.log(response);
+      } catch (error) {
+         console.log(error);
+      }
    };
    return (
       <section className="account d-flex">

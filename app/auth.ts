@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import User from "model/user";
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
@@ -24,8 +24,6 @@ const authorizeUser = async (credentials: {
       if (!isMatched) {
          throw new Error("Incorrect email or password!");
       }
-
-      console.log(user);
       return user;
    } else {
       throw new Error("User not found!");

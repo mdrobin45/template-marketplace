@@ -1,3 +1,4 @@
+"use client";
 import loginVector from "@/assets/images/thumbs/login-vector.jpg";
 import { credentialSignIn } from "actions";
 import InputField from "components/common/InputField";
@@ -7,6 +8,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Login() {
+   // Handle form submission
+   const handleFormSubmit = async (e: any) => {
+      e.preventDefault();
+      const formData = new FormData(e.currentTarget);
+      const email = formData.get("email");
+      const password = formData.get("password");
+
+      try {
+         const response = await credentialSignIn({ email, password });
+         console.log(response);
+      } catch (error) {
+         console.log(error);
+      }
+   };
    return (
       <section className="account d-flex">
          <div className="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">
@@ -23,7 +38,7 @@ export default function Login() {
                   Sign In
                </h4>
                <p className="mb-3">Welcome back! please enter your details</p>
-               <form action={credentialSignIn}>
+               <form onSubmit={handleFormSubmit}>
                   <InputField
                      name="email"
                      placeholder="example@mail.com"
