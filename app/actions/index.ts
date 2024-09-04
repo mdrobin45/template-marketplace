@@ -16,11 +16,15 @@ export async function githubSignIn(formData: FormData) {
 
 // Credential sign in
 export async function credentialSignIn(formData: FormData) {
-   await signIn("credentials", {
-      email: formData.get("email"),
-      password: formData.get("password"),
-      redirectTo: "/",
-   });
+   try {
+      signIn("credentials", {
+         email: formData.get("email"),
+         password: formData.get("password"),
+         redirectTo: "/",
+      });
+   } catch (error) {
+      console.log(error.err);
+   }
 }
 
 // Sign Out

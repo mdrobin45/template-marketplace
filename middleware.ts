@@ -1,10 +1,11 @@
+import { auth } from "auth";
 import { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
    // const { nextUrl } = request;
-   // const session = await auth();
+   const session = await auth();
    // const isAuthenticated = !!session?.user;
-   // console.log(isAuthenticated);
+   // console.log("Authenticate", session);
    // const isPrivateRoute = PROTECTED_ROUTES.find((route) =>
    //    nextUrl.pathname.startsWith(route)
    // );
@@ -15,6 +16,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
    matcher: [
-      // "/((?!api|_next/static|_next/image|assets/images|icons|favicon.ico|sitemap.xml|robots.txt).*)",
+      "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
    ],
 };
