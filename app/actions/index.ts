@@ -22,7 +22,7 @@ export async function credentialSignIn(formData: {
    try {
       await signIn("credentials", {
          ...formData,
-         redirectTo: "/",
+         redirect: false,
       });
    } catch (error) {
       throw error;

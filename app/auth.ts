@@ -1,3 +1,4 @@
+import authConfig from "auth.config";
 import bcrypt from "bcryptjs";
 import User from "model/user";
 import NextAuth from "next-auth";
@@ -7,7 +8,7 @@ import GoogleProvider from "next-auth/providers/google";
 import dbConnect from "utils/db";
 
 // Authorize user
-const authorizeUser = async (credentials: {
+const userAuthorizer = async (credentials: {
    email: string;
    password: string;
 }) => {
@@ -31,16 +32,14 @@ const authorizeUser = async (credentials: {
 };
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-   session: {
-      strategy: "jwt",
-   },
+   ...authConfig,
    providers: [
       Credentials({
          credentials: {
             email: {},
             password: {},
          },
-         authorize: authorizeUser,
+         authorize: userAuthorizer,
       }),
       GoogleProvider,
       GithubProvider,
