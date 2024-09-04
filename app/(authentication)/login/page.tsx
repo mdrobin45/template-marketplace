@@ -1,12 +1,12 @@
 "use client";
 import loginVector from "@/assets/images/thumbs/login-vector.jpg";
 import { credentialSignIn } from "actions";
-import InputField from "components/common/InputField";
 import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import LoginForm from "./LoginForm";
 
 export default function Login() {
    const [error, setError] = useState("");
@@ -52,47 +52,7 @@ export default function Login() {
                   Sign In
                </h4>
                <p className="mb-3">Welcome back! please enter your details</p>
-               <form onSubmit={handleFormSubmit}>
-                  <InputField
-                     name="email"
-                     placeholder="example@mail.com"
-                     required={true}
-                     id="email"
-                     type="email"
-                     label="Email"
-                  />
-                  <InputField
-                     name="password"
-                     placeholder="Enter your password"
-                     required={true}
-                     id="password"
-                     type="password"
-                     label="Password"
-                  />
-                  <div className="col-12">
-                     <div className="flx-between gap-1 mb-3">
-                        <div className="common-check my-2">
-                           <InputField
-                              name="rememberme"
-                              id="rememberme"
-                              type="checkbox"
-                              label="Keep me signed in"
-                           />
-                        </div>
-                        <Link
-                           href="/restore-password"
-                           className="forgot-password text-decoration-underline text-main text-poppins font-14">
-                           Forgot password?
-                        </Link>
-                     </div>
-                  </div>
-                  <button
-                     type="submit"
-                     className="btn btn-main btn-lg w-100 pill">
-                     {" "}
-                     Sign In
-                  </button>
-               </form>
+               <LoginForm handleFormSubmit={handleFormSubmit} />
                <GoogleAuth />
                <GithubAuth />
                <div className="col-sm-12 mb-0 mt-3">

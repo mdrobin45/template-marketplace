@@ -1,8 +1,9 @@
+import { auth } from "auth";
 import { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
    // const { nextUrl } = request;
-   // const session = await auth();
+   const session = await auth();
    // const isAuthenticated = !!session?.user;
    // console.log("Authenticate", session);
    // const isPrivateRoute = PROTECTED_ROUTES.find((route) =>
