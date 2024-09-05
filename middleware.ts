@@ -8,7 +8,6 @@ export async function middleware(request: NextRequest) {
    const { nextUrl } = request;
    const session = await auth();
    const isAuthenticated = !!session?.user;
-   console.log("Authenticate", isAuthenticated);
 
    const isPrivateRoute = PROTECTED_ROUTES.find((route) =>
       nextUrl.pathname.startsWith(route)
