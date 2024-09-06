@@ -1,11 +1,8 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import dynamic from "next/dynamic";
 import { ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
 import "./global.css";
-
-// NoSSR component
-const Toaster = dynamic(() => import("./NoSSR/HotToast"), { ssr: false });
 
 export const metadata = {
    title: "Create Next App",
@@ -18,8 +15,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
    return (
       <html lang="en">
-         <Toaster />
-         <body>{children}</body>
+         <body>
+            <Toaster position="top-center" />
+            {children}
+         </body>
       </html>
    );
 }

@@ -4,17 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 
-interface SubmenuItems{
-   linkText: string,
-   linkURL:string
+interface SubmenuItems {
+   linkText: string;
+   linkURL: string;
 }
 
-interface MainMenuItems{
-   linkText: string,
-   linkURL: string,
-   submenu:false | SubmenuItems[]
+interface MainMenuItems {
+   linkText: string;
+   linkURL: string;
+   submenu: false | SubmenuItems[];
 }
-const menu:MainMenuItems[] = [
+const menu: MainMenuItems[] = [
    {
       linkText: "Home",
       linkURL: "/",

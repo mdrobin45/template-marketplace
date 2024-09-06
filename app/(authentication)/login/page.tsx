@@ -5,11 +5,14 @@ import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import LoginForm from "./LoginForm";
 
 export default function Login() {
    const [error, setError] = useState("");
+   const router = useRouter();
 
    // Handle form submission
    const handleFormSubmit = async (e: any) => {
@@ -18,16 +21,16 @@ export default function Login() {
       const email = formData.get("email");
       const password = formData.get("password");
 
+      const responsePromise = credentialSignIn({ email, password });
+
       try {
-         const response = await credentialSignIn({ email, password });
-         if (response) {
-            alert("Succ");
+         const res = await responsePromise;
+         if (res) {
+            toast.success("Login Successful");
+            router.push("/");
          }
-      } catch (error) {
-         console.log(error);
-         if (error) {
-            setError("Incorrect email or password!");
-         }
+      } catch {
+         toast.error("Incorrect email or password");
       }
    };
    return (
