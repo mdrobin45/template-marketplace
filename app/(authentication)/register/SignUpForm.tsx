@@ -1,11 +1,14 @@
+"use client";
 import InputField from "components/common/InputField";
 import useRegister from "hooks/useRegister";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUpForm() {
+   const router = useRouter();
    const handleSignUpFormSubmit = useRegister();
    return (
-      <form onSubmit={(e) => handleSignUpFormSubmit(e)}>
+      <form onSubmit={(e) => handleSignUpFormSubmit(e, router)}>
          <InputField
             name="name"
             placeholder="Enter your name"

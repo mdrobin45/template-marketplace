@@ -1,11 +1,13 @@
+import { credentialSignIn } from "actions";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import toast from "react-hot-toast";
 import { credUserRegister } from "utils/api";
-import useLogin from "./useLogin";
 
 export default function useRegister() {
-   const handleLoginFormSubmit = useLogin();
-
-   const handleSignUpFormSubmit = async (e: any) => {
+   const handleSignUpFormSubmit = async (
+      e: any,
+      redirectTo?: AppRouterInstance
+   ) => {
       e.preventDefault();
 
       try {
@@ -19,7 +21,10 @@ export default function useRegister() {
 
          if (response.status === 201) {
             toast.success("Registration Successful");
-            handleLoginFormSubmit(e);
+            credentialSignIn({ email, password });
+            if (redirectTo) {
+               redirectTo.push("/");
+            }
          } else if (response.status === 409) {
             toast.error("User already exist");
          }

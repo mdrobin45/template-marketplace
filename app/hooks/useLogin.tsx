@@ -8,8 +8,7 @@ export default function useLogin() {
       redirectTo?: AppRouterInstance
    ) => {
       e.preventDefault();
-      console.log(e);
-      const formData = new FormData(e.currentTarget);
+      let formData = new FormData(e.currentTarget);
       const email = formData.get("email");
       const password = formData.get("password");
 
