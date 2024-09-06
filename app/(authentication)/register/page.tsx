@@ -3,10 +3,13 @@ import registerVector from "@/assets/images/thumbs/sign-up-vector.jpg";
 import GithubAuth from "components/common/socialAuth/GithubAuth";
 import GoogleAuth from "components/common/socialAuth/GoogleAuth";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import { credUserRegister } from "utils/api";
 import SignUpForm from "./SignUpForm";
 
 export default function Register() {
+   const router = useRouter();
    const handleFormSubmit = async (e: any) => {
       e.preventDefault();
 
@@ -18,7 +21,11 @@ export default function Register() {
          const password = formData.get("password") as string;
 
          const response = await credUserRegister({ name, email, password });
-         console.log(response);
+
+         if (response.status === 201) {
+            toast.success("Registration Successful");
+            router.push("/login");
+         }
       } catch (error) {
          console.log(error);
       }

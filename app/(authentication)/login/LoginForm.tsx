@@ -1,9 +1,15 @@
+"use client";
 import InputField from "components/common/InputField";
+import useLogin from "hooks/useLogin";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function LoginForm({ handleFormSubmit }) {
+export default function LoginForm() {
+   const router = useRouter();
+   const handleFormSubmit = useLogin();
+
    return (
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={(e) => handleFormSubmit(e, router)}>
          <InputField
             name="email"
             placeholder="example@mail.com"
