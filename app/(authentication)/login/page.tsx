@@ -6,28 +6,6 @@ import Link from "next/link";
 import LoginForm from "./LoginForm";
 
 export default function Login() {
-   // const [error, setError] = useState("");
-   // const router = useRouter();
-
-   // Handle form submission
-   // const handleFormSubmit = async (e: any) => {
-   //    e.preventDefault();
-   //    const formData = new FormData(e.currentTarget);
-   //    const email = formData.get("email");
-   //    const password = formData.get("password");
-
-   //    const responsePromise = credentialSignIn({ email, password });
-
-   //    try {
-   //       const res = await responsePromise;
-   //       if (res) {
-   //          toast.success("Login Successful");
-   //          router.push("/");
-   //       }
-   //    } catch {
-   //       toast.error("Incorrect email or password");
-   //    }
-   // };
    return (
       <section className="account d-flex">
          <div className="account__left d-md-flex d-none flx-align position-relative z-index-1 overflow-hidden">

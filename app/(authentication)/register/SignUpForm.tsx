@@ -1,9 +1,11 @@
 import InputField from "components/common/InputField";
+import useRegister from "hooks/useRegister";
 import Link from "next/link";
 
-export default function SignUpForm({ handleFormSubmit }) {
+export default function SignUpForm() {
+   const handleFormSubmit = useRegister();
    return (
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={(e) => handleFormSubmit(e)}>
          <InputField
             name="name"
             placeholder="Enter your name"
