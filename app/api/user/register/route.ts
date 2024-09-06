@@ -20,7 +20,7 @@ export async function POST(request: Request) {
          await new User({ ...data, password: encryptedPwd }).save();
 
          return NextResponse.json(
-            { message: "Registration successful", status: 201 },
+            { message: "Registration successful" },
             { status: 201 }
          );
       }

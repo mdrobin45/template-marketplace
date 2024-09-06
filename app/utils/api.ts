@@ -51,9 +51,9 @@ export const credUserRegister = async (formData: {
    password: string;
 }): Promise<any | null> => {
    try {
-      const { data } = await axiosRequest.post(`/user/register`, formData);
-      return data;
+      const response = await axiosRequest.post(`/user/register`, formData);
+      return response;
    } catch (err) {
-      return err;
+      return err.response;
    }
 };

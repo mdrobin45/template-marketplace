@@ -6,10 +6,10 @@ import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
    const router = useRouter();
-   const handleFormSubmit = useLogin();
+   const handleLoginFormSubmit = useLogin();
 
    return (
-      <form onSubmit={(e) => handleFormSubmit(e, router)}>
+      <form onSubmit={(e) => handleLoginFormSubmit(e, router)}>
          <InputField
             name="email"
             placeholder="example@mail.com"

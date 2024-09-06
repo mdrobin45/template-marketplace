@@ -3,8 +3,12 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 import toast from "react-hot-toast";
 
 export default function useLogin() {
-   const handleFormSubmit = async (e: any, redirectTo: AppRouterInstance) => {
+   const handleLoginFormSubmit = async (
+      e: any,
+      redirectTo?: AppRouterInstance
+   ) => {
       e.preventDefault();
+      console.log(e);
       const formData = new FormData(e.currentTarget);
       const email = formData.get("email");
       const password = formData.get("password");
@@ -15,11 +19,13 @@ export default function useLogin() {
          const res = await responsePromise;
          if (res) {
             toast.success("Login Successful");
-            redirectTo.push("/");
+            if (redirectTo) {
+               redirectTo.push("/");
+            }
          }
       } catch {
          toast.error("Incorrect email or password");
       }
    };
-   return handleFormSubmit;
+   return handleLoginFormSubmit;
 }
