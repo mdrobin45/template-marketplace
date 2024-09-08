@@ -27,7 +27,7 @@ export async function credentialSignIn(formData: {
 
       return response;
    } catch (error) {
-      return error;
+      return new Error("Something went wrong");
    }
 }
 // Sign Out

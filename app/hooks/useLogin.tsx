@@ -1,3 +1,4 @@
+"use client";
 import { credentialSignIn } from "actions";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import toast from "react-hot-toast";
@@ -13,7 +14,6 @@ export default function useLogin() {
       const password = formData.get("password");
 
       const responsePromise = credentialSignIn({ email, password });
-
       try {
          const res = await responsePromise;
          if (res) {
