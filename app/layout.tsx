@@ -1,5 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import StoreProvider from "lib/redux/StoreProvider";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
 import "./global.css";
@@ -16,9 +17,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
    return (
       <html lang="en">
          <body>
-            <Toaster position="top-center" />
-
-            {children}
+            <StoreProvider>
+               <Toaster position="top-center" />
+               {children}
+            </StoreProvider>
          </body>
       </html>
    );
