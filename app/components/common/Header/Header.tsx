@@ -1,8 +1,7 @@
-import userIcon from "@/assets/images/icons/user.svg";
 import logo from "@/assets/images/logo/logo-two.png";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
+import ButtonGroup from "./ButtonGroup";
 
 interface SubmenuItems {
    linkText: string;
@@ -102,18 +101,7 @@ export default function Header() {
                      />
                      <span className="qty-badge font-12">0</span>
                   </Link>
-
-                  <div className="header-right__inner gap-3 flx-align d-lg-flex d-none">
-                     <Button
-                        label="Create Account"
-                        url="/register"
-                        size="small">
-                        <Image width={20} height={20} src={userIcon} alt="" />{" "}
-                     </Button>
-                  </div>
-                  <button type="button" className="toggle-mobileMenu d-lg-none">
-                     <i className="las la-bars"></i>
-                  </button>
+                  <ButtonGroup />
                </div>
             </nav>
          </div>
