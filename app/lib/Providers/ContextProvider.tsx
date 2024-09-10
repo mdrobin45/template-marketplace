@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 export default function ContextProvider({ children }) {
    const [isLoading, setIsLoading] = useState(true);
-   const [isAuthenticated, setIsAuthenticated] = useState(false);
+   const [authSession, setAuthSession] = useState(null);
    useEffect(() => {
       const authState = async () => {
-         const authState = await getAuthState();
-         setIsAuthenticated(authState);
+         const userSession = await getAuthState();
+         setAuthSession(userSession);
          setIsLoading(false);
       };
       authState();
@@ -17,7 +17,7 @@ export default function ContextProvider({ children }) {
 
    const providerValue = {
       isLoading,
-      isAuthenticated,
+      authSession,
    };
 
    if (isLoading) {

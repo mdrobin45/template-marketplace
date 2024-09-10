@@ -37,7 +37,7 @@ export async function credentialSignIn(formData: {
 
 export async function getAuthState() {
    const session = await auth();
-   return !!session?.user;
+   return session;
 }
 // Sign Out
 export async function logout() {
