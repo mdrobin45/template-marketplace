@@ -1,6 +1,10 @@
 "use server";
 
 import { signIn, signOut } from "auth";
+import authConfig from "auth.config";
+import NextAuth from "next-auth";
+
+const { auth } = NextAuth(authConfig);
 
 // Google sign in configuration
 export async function googleSignIn(formData: FormData) {
@@ -29,6 +33,11 @@ export async function credentialSignIn(formData: {
    } catch (error) {
       return new Error("Something went wrong");
    }
+}
+
+export async function getAuthState() {
+   const session = await auth();
+   return !!session?.user;
 }
 // Sign Out
 export async function logout() {

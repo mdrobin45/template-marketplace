@@ -1,16 +1,28 @@
 "use client";
-import authConfig from "auth.config";
+import { getAuthState } from "actions";
 import { AppContext } from "context";
-import NextAuth from "next-auth";
+import { useEffect, useState } from "react";
 
-const { auth } = NextAuth(authConfig);
 export default function ContextProvider({ children }) {
-   const session = auth();
-   const isAuthenticated = session?.user ? true : false;
+   const [isLoading, setIsLoading] = useState(true);
+   const [isAuthenticated, setIsAuthenticated] = useState(false);
+   useEffect(() => {
+      const authState = async () => {
+         const authState = await getAuthState();
+         setIsAuthenticated(authState);
+         setIsLoading(false);
+      };
+      authState();
+   }, []);
 
    const providerValue = {
+      isLoading,
       isAuthenticated,
    };
+
+   if (isLoading) {
+      return null; // Render loading state while waiting for authentication data
+   }
 
    return (
       <AppContext.Provider value={providerValue}>
