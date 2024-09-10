@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "components/BootstrapClient";
-import { TanstackProvider } from "Providers/Providers";
+import { TanstackProvider } from "lib/Providers/TanstackQuery";
 import "../global.css";
 export default function RootLayout({ children }) {
    return (
