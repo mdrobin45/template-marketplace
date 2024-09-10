@@ -16,7 +16,6 @@ export default function ContextProvider({ children }) {
    }, []);
 
    const providerValue = {
-      isLoading,
       authSession,
    };
 

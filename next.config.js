@@ -5,8 +5,10 @@ module.exports = {
          {
             protocol: "https",
             hostname: "wowtheme7.com",
-            // port: "",
-            // pathname: "/account123/**",
+         },
+         {
+            protocol: "https",
+            hostname: "lh3.googleusercontent.com",
          },
       ],
    },
