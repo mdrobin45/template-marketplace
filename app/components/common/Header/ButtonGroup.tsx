@@ -22,7 +22,6 @@ const dropdownLinks = [
 export default function ButtonGroup() {
    const { authSession } = useContext(AppContext);
    const [open, setOpen] = useState(false);
-   const { name, email } = authSession?.user;
 
    let content: ReactElement;
    if (authSession?.user) {
@@ -40,8 +39,8 @@ export default function ButtonGroup() {
             </div>
             <div className={`menu ${open && "active"}`}>
                <div className="userDetails">
-                  <h4>{name}</h4>
-                  <p>{email}</p>
+                  <h4>{authSession?.user?.name}</h4>
+                  <p>{authSession?.user?.email}</p>
                </div>
                <ul>
                   {dropdownLinks.map((link, index) => (
