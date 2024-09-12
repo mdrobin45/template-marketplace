@@ -1,6 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ContextProvider from "lib/Providers/ContextProvider";
 import { TanstackProvider } from "lib/Providers/TanstackQuery";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
@@ -18,12 +17,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
    return (
       <html lang="en">
          <body>
-            <ContextProvider>
-               <TanstackProvider>
-                  <Toaster position="top-center" />
-                  {children}
-               </TanstackProvider>
-            </ContextProvider>
+            <TanstackProvider>
+               <Toaster position="top-center" />
+               {children}
+            </TanstackProvider>
          </body>
       </html>
    );

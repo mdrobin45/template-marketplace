@@ -3,15 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "components/BootstrapClient";
 import { TanstackProvider } from "lib/Providers/TanstackQuery";
 import "../global.css";
-export default function RootLayout({ children }) {
+export default function AuthLayout({ children }) {
    return (
-      <html lang="en">
-         <body>
-            <TanstackProvider>
-               {children}
-               <BootstrapClient />
-            </TanstackProvider>
-         </body>
-      </html>
+      <>
+         <TanstackProvider>
+            {children}
+            <BootstrapClient />
+         </TanstackProvider>
+      </>
    );
 }

@@ -44,4 +44,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       GoogleProvider,
       GithubProvider,
    ],
+   callbacks: {
+      session({ session, user }) {
+         return session;
+      },
+   },
 });

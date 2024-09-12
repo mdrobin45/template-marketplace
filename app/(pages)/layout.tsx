@@ -4,15 +4,13 @@ import BootstrapClient from "components/BootstrapClient";
 import Footer from "components/common/Footer";
 import Header from "components/common/Header/Header";
 import "../global.css";
-export default function RootLayout({ children }) {
+export default function PageLayout({ children }) {
    return (
-      <html lang="en">
-         <body>
-            <Header />
-            {children}
-            <BootstrapClient />
-            <Footer />
-         </body>
-      </html>
+      <>
+         <Header />
+         {children}
+         <BootstrapClient />
+         <Footer />
+      </>
    );
 }

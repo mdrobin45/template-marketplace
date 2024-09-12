@@ -7,12 +7,8 @@ import Settings from "components/profilePage/Settings";
 import Statement from "components/profilePage/Statement";
 import Templates from "components/profilePage/Templates";
 import TopAreaProfile from "components/profilePage/TopAreaProfile";
-import { AppContext } from "context";
-import { useContext } from "react";
 
 export default function Profile() {
-   const { isAuthenticated } = useContext(AppContext);
-   console.log(isAuthenticated);
    return (
       <>
          <TopAreaProfile />
