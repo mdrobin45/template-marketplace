@@ -27,7 +27,10 @@ export default function UserProfile({ authSession }) {
                <Image
                   width={50}
                   height={50}
-                  src={authSession?.user?.image || ""}
+                  src={
+                     authSession?.user?.image ||
+                     "https://i.ibb.co.com/nmCN10Z/avatar.png"
+                  }
                   alt="User Profile"
                />
             </div>

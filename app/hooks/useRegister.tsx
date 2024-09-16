@@ -19,11 +19,19 @@ export default function useRegister() {
 
          const response = await credUserRegister({ name, email, password });
 
+         // Auto login after registration is successful
          if (response.status === 201) {
-            toast.success("Registration Successful");
-            credentialSignIn({ email, password });
-            if (redirectTo) {
-               redirectTo.push("/");
+            const loginRes = credentialSignIn({ email, password });
+            try {
+               const res = await loginRes;
+               if (res) {
+                  toast.success("Registration Successful");
+                  if (redirectTo) {
+                     redirectTo.push("/");
+                  }
+               }
+            } catch {
+               toast.error("Something went wrong!");
             }
          } else if (response.status === 409) {
             toast.error("User already exist");
