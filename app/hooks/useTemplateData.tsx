@@ -1,16 +1,11 @@
-"use client";
-
 import { useQuery } from "@tanstack/react-query";
 import { getProductBySlug } from "utils/api";
 
-interface PropsType {
-   key: string;
-   slug?: string;
-}
-export default function useFetch({ key, slug }: PropsType) {
+export default function useTemplateData({ slug }) {
    const { data, isLoading } = useQuery({
-      queryKey: [`${key}`],
+      queryKey: [`template-details`],
       queryFn: () => getProductBySlug(slug),
    });
-   return { data, isLoading };
+   const templateData = { data, isLoading };
+   return templateData;
 }

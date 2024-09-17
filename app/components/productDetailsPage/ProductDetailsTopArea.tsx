@@ -2,16 +2,14 @@
 import breadcrumbBG from "@/assets/images/gradients/breadcrumb-gradient-bg.png";
 import cartIcon from "@/assets/images/icons/cart-icon.svg";
 import checkIcon from "@/assets/images/icons/check-icon.svg";
-import shareIcon from "@/assets/images/icons/share-icon.svg";
-import { useQuery } from "@tanstack/react-query";
+import { AppContext } from "context";
 import Image from "next/image";
-import { getProductBySlug } from "utils/api";
+import { useContext } from "react";
 
-export default function ProductDetailsTopArea({ params }) {
-   const { data, isLoading } = useQuery({
-      queryKey: [`template-details`],
-      queryFn: () => getProductBySlug(params.slug),
-   });
+export default function ProductDetailsTopArea() {
+   const { templateData } = useContext(AppContext);
+   console.log("TemplateData", templateData);
+
    return (
       <section className="breadcrumb border-bottom p-0 d-block section-bg position-relative z-index-1">
          <div className="breadcrumb-two">
@@ -52,13 +50,13 @@ export default function ProductDetailsTopArea({ params }) {
                            </li>
                            <li className="breadcrumb-list__item font-14 text-body">
                               <span className="breadcrumb-list__text">
-                                 {data?.name}
+                                 {templateData?.name}
                               </span>
                            </li>
                         </ul>
 
                         <h3 className="breadcrumb-two-content__title mb-3 text-capitalize">
-                           {data?.name}
+                           {templateData?.name}
                         </h3>
 
                         <div className="breadcrumb-content flx-align gap-3">
@@ -66,9 +64,9 @@ export default function ProductDetailsTopArea({ params }) {
                               <span className="text">
                                  By{" "}
                                  <a href="#" className="link text-main fw-600">
-                                    {data?.author?.firstName +
+                                    {templateData?.author?.firstName +
                                        " " +
-                                       data?.author?.lastName}
+                                       templateData?.author?.lastName}
                                  </a>{" "}
                               </span>
                            </div>
@@ -82,7 +80,7 @@ export default function ProductDetailsTopArea({ params }) {
                                  />
                               </span>
                               <span className="text">
-                                 {data?.totalSales} sales
+                                 {templateData?.totalSales} sales
                               </span>
                            </div>
                            <div className="breadcrumb-content__item text-heading fw-500 flx-align gap-2">
@@ -186,42 +184,6 @@ export default function ProductDetailsTopArea({ params }) {
                      </button>
                   </li>
                </ul>
-               <div className="social-share">
-                  <button type="button" className="social-share__button">
-                     <Image
-                        style={{ width: "auto", height: "auto" }}
-                        src={shareIcon}
-                        alt=""
-                     />
-                  </button>
-                  <div className="social-share__icons">
-                     <ul className="social-list colorful-style">
-                        <li className="social-list__item">
-                           <a
-                              href="https://www.facebook.com"
-                              className="social-list__link text-body flex-center">
-                              <i className="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li className="social-list__item">
-                           <a
-                              href="https://www.twitter.com"
-                              className="social-list__link text-body flex-center">
-                              {" "}
-                              <i className="fab fa-linkedin-in"></i>
-                           </a>
-                        </li>
-                        <li className="social-list__item">
-                           <a
-                              href="https://www.google.com"
-                              className="social-list__link text-body flex-center">
-                              {" "}
-                              <i className="fab fa-twitter"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
             </div>
          </div>
       </section>

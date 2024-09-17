@@ -1,3 +1,5 @@
+import GallerySlider from "./GallerySlider";
+
 export default function ProductDescription() {
    return (
       <div
@@ -7,22 +9,13 @@ export default function ProductDescription() {
          aria-labelledby="pills-product-details-tab"
          tabIndex={0}>
          <div className="product-details">
-            <div className="product-details__thumb">
-               <img src="assets/images/thumbs/product-details.png" alt="" />
-            </div>
+            <GallerySlider />
             <div className="product-details__buttons flx-align justify-content-center gap-3">
                <a
                   href="#"
                   className="btn btn-main d-inline-flex align-items-center gap-2 pill px-sm-5 justify-content-center">
                   Live Preview
                   <img src="assets/images/icons/eye-outline.svg" alt="" />
-               </a>
-
-               <a
-                  href="#"
-                  className="screenshot-btn btn btn-white pill px-sm-5"
-                  data-images='["assets/images/thumbs/product-details.png", "assets/images/thumbs/product-details.png"]'>
-                  Screenshot
                </a>
             </div>
 
