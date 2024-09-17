@@ -6,6 +6,7 @@ interface ProductInfoType {
    name: string;
    _id: string;
    category: string;
+   slug: string;
    salePrice: number;
    regularPrice: number;
    totalSales: number;
@@ -23,7 +24,7 @@ export default function ProductCard({
    return (
       <div className={`product-card ${extraClass && extraClass}`}>
          <div className="product-card__thumb d-flex">
-            <a href={`/product-details/${product?._id}`} className="link w-100">
+            <Link href={`/templates/${product?.slug}`} className="link w-100">
                <Image
                   width={290}
                   height={160}
@@ -31,16 +32,16 @@ export default function ProductCard({
                   alt="Thumbnail"
                   className="cover-img"
                />
-            </a>
+            </Link>
             <button type="button" className="product-card__wishlist">
                <i className="fa-solid fa-heart text-danger"></i>
             </button>
          </div>
          <div className="product-card__content">
             <h6 className="product-card__title">
-               <a href={`/template-details/${product?._id}`} className="link">
+               <Link href={`/templates/${product?.slug}`} className="link">
                   {product?.name}
-               </a>
+               </Link>
             </h6>
             <div className="product-card__info flx-between gap-2">
                <span className="product-card__author">

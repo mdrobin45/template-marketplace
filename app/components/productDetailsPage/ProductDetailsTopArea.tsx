@@ -1,10 +1,17 @@
+"use client";
 import breadcrumbBG from "@/assets/images/gradients/breadcrumb-gradient-bg.png";
 import cartIcon from "@/assets/images/icons/cart-icon.svg";
 import checkIcon from "@/assets/images/icons/check-icon.svg";
 import shareIcon from "@/assets/images/icons/share-icon.svg";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import { getProductBySlug } from "utils/api";
 
-export default function ProductDetailsTopArea() {
+export default function ProductDetailsTopArea({ params }) {
+   const { data, isLoading } = useQuery({
+      queryKey: [`template-details`],
+      queryFn: () => getProductBySlug(params.slug),
+   });
    return (
       <section className="breadcrumb border-bottom p-0 d-block section-bg position-relative z-index-1">
          <div className="breadcrumb-two">
@@ -45,13 +52,13 @@ export default function ProductDetailsTopArea() {
                            </li>
                            <li className="breadcrumb-list__item font-14 text-body">
                               <span className="breadcrumb-list__text">
-                                 SaaS
+                                 {data?.name}
                               </span>
                            </li>
                         </ul>
 
                         <h3 className="breadcrumb-two-content__title mb-3 text-capitalize">
-                           Quantum: SaaS Landing Page WordPress Theme
+                           {data?.name}
                         </h3>
 
                         <div className="breadcrumb-content flx-align gap-3">
@@ -59,7 +66,9 @@ export default function ProductDetailsTopArea() {
                               <span className="text">
                                  By{" "}
                                  <a href="#" className="link text-main fw-600">
-                                    Oviousdev
+                                    {data?.author?.firstName +
+                                       " " +
+                                       data?.author?.lastName}
                                  </a>{" "}
                               </span>
                            </div>
@@ -72,7 +81,9 @@ export default function ProductDetailsTopArea() {
                                     className="white-version"
                                  />
                               </span>
-                              <span className="text">158 sales</span>
+                              <span className="text">
+                                 {data?.totalSales} sales
+                              </span>
                            </div>
                            <div className="breadcrumb-content__item text-heading fw-500 flx-align gap-2">
                               <span className="icon">

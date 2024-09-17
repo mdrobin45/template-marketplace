@@ -1,11 +1,11 @@
 import ProductDetailsTabContent from "components/productDetailsPage/ProductDetailsTabContent";
-import Breadcrumb from "components/productDetailsPage/ProductDetailsTopArea";
+import ProductDetailsTopArea from "components/productDetailsPage/ProductDetailsTopArea";
 import ProductDetailsSidebar from "components/productDetailsPage/Sidebar";
 
-export default function ProductDetails() {
+export default function ProductDetails({ params }) {
    return (
       <>
-         <Breadcrumb />
+         <ProductDetailsTopArea params={params} />
          <div className="product-details mt-32 padding-b-120">
             <div className="container container-two">
                <div className="row gy-4">

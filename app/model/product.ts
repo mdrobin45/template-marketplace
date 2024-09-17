@@ -18,11 +18,12 @@ const productSchema = new mongoose.Schema(
          type: Number,
          required: true,
       },
-      templateAuthor: {
+      author: {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "Author",
+         ref: "User",
          required: true,
       },
+      slug: String,
       thumbnail: String,
       liveUrl: String,
       description: {

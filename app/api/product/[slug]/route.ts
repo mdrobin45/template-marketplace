@@ -6,8 +6,11 @@ export async function GET(request: Request, { params }) {
    try {
       await dbConnect();
 
-      const { id } = params;
-      const data = await Product.findById(id).populate("templateAuthor");
+      const { slug } = params;
+      const data = await Product.findOne({ slug }).populate({
+         path: "author",
+         select: "firstName lastName",
+      });
       return NextResponse.json(data, { status: 200 });
    } catch (error) {
       return NextResponse.json(

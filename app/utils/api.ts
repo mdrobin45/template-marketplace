@@ -14,6 +14,16 @@ export const filterByCategory = async (
    }
 };
 
+// Get product by slug
+export const getProductBySlug = async (slug: string): Promise<any | null> => {
+   try {
+      const { data } = await axiosRequest.get(`/product/${slug}`);
+      return data;
+   } catch {
+      return null;
+   }
+};
+
 // Get featured product
 export const getFeaturedProduct = async (): Promise<any | null> => {
    try {
