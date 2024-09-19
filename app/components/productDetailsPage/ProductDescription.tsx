@@ -2,6 +2,9 @@ import { useContext } from "react";
 import GallerySlider from "./GallerySlider";
 import { AppContext } from "context";
 import AuthorMoreItem from "./AuthorMoreItem";
+import eyeIcon from "@/assets/images/icons/eye-outline.svg";
+import "./style.css";
+import Image from "next/image";
 
 export default function ProductDescription() {
    const { templateData } = useContext(AppContext);
@@ -19,12 +22,12 @@ export default function ProductDescription() {
                   href="#"
                   className="btn btn-main d-inline-flex align-items-center gap-2 pill px-sm-5 justify-content-center">
                   Live Preview
-                  <img src="assets/images/icons/eye-outline.svg" alt="" />
+                  <Image src={eyeIcon} alt="Eye Icon" width={16} height={17} />
                </a>
             </div>
             <div>
                <h3>{templateData?.title}</h3>
-               <p>{templateData?.description}</p>
+               <div className="product-description" dangerouslySetInnerHTML={{ __html: templateData?.description }} />
             </div>
 
             {/* More Items from this author */}

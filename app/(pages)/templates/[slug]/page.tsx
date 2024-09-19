@@ -26,7 +26,7 @@ export default function ProductDetails({ params }) {
                   <div className="container container-two">
                      <div className="row gy-4">
                         <ProductDetailsTabContent />
-                        <ProductDetailsSidebar />
+                        <ProductDetailsSidebar id={data?.author?._id} />
                      </div>
                   </div>
                </div>
