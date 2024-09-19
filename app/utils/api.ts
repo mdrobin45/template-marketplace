@@ -24,6 +24,16 @@ export const getProductBySlug = async (slug: string): Promise<any | null> => {
    }
 };
 
+// Get author by id
+export const getAuthorById = async (id: string): Promise<any | null> => {
+   try {
+      const { data } = await axiosRequest.get(`/user/${id}`);
+      return data;
+   } catch {
+      return null;
+   }
+};
+
 // Get featured product
 export const getFeaturedProduct = async (): Promise<any | null> => {
    try {

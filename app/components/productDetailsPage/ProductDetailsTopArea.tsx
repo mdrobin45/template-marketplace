@@ -8,7 +8,6 @@ import { useContext } from "react";
 
 export default function ProductDetailsTopArea() {
    const { templateData } = useContext(AppContext);
-   console.log("TemplateData", templateData);
 
    return (
       <section className="breadcrumb border-bottom p-0 d-block section-bg position-relative z-index-1">
