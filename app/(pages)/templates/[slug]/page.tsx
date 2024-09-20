@@ -2,7 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import ProductDetailsTabContent from "components/productDetailsPage/ProductDetailsTabContent";
 import ProductDetailsTopArea from "components/productDetailsPage/ProductDetailsTopArea";
-import ProductDetailsSidebar from "components/productDetailsPage/Sidebar";
+import ProductDetailsSidebar from "components/productDetailsPage/Sidebar/Sidebar";
 import { AppContext } from "context";
 import { useContext, useEffect } from "react";
 import { getProductBySlug } from "utils/api";
