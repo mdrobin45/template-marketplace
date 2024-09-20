@@ -45,7 +45,7 @@ const MetaAttributes: React.FC<MetaAttributesProps> = ({ templateData }) => {
           {templateData.compatible.map((compatibleWith: string, index: number) => (
             <span key={index}>
               {compatibleWith}
-              {index < templateData.compatible.length-1 && ', ' && index === templateData.compatible.length-1 && ''}
+              {index < templateData.compatible.length-1 && ', ' || index === templateData.compatible.length-1 && ''}
             </span>
           ))}
         </div>
@@ -68,7 +68,7 @@ const MetaAttributes: React.FC<MetaAttributesProps> = ({ templateData }) => {
           {templateData.filesIncluded.map((fileIncluded: string, index: number) => (
             <span key={index} className="hover-text-decoration-underline">
               {fileIncluded}
-              {index < templateData.filesIncluded.length-1 && ', ' && index === templateData.filesIncluded.length-1 && ''}
+              {index < templateData.filesIncluded.length-1 && ', ' || index === templateData.filesIncluded.length-1 && ''}
             </span>
           ))}
         </span>
@@ -83,7 +83,7 @@ const MetaAttributes: React.FC<MetaAttributesProps> = ({ templateData }) => {
           {templateData.tags.map((tag: string, index: number) => (
             <span key={index} className="hover-text-decoration-underline">
               {tag}
-              {index < templateData.tags.length-1 && ', ' && index === templateData.tags.length-1 && ''}
+              {index < templateData.tags.length-1 && ', ' || index === templateData.tags.length-1 && ''}
             </span>
           ))}
         </div>

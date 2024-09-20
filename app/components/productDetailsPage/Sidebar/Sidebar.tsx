@@ -22,8 +22,6 @@ export default function ProductDetailsSidebar({ id }: ProductDetailsSidebarProps
       queryKey: [`author-${id}`],
       queryFn: () => getAuthorById(id),
    });
-   console.log("Author", author);
-   console.log("Product Data", templateData);
 
 
    if (isLoading || productLoading) {

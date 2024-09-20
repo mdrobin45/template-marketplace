@@ -11,7 +11,7 @@ interface AuthorMoreItemProps {
 
 const AuthorMoreItem = ({ id }: AuthorMoreItemProps) => {
  const { data: author, isLoading } = useQuery({
-    queryKey: [`author-${id}`],
+    queryKey: ["author-moreItems"],
     queryFn: () => getAuthorById(id),
   });
 
@@ -34,8 +34,8 @@ const AuthorMoreItem = ({ id }: AuthorMoreItemProps) => {
        </Link>
     </div>
     <div className="more-item__content flx-align">
-       {author.templates.map((template) => (
-       <div className="more-item__item">
+       {author.templates.map((template:any) => (
+       <div key={template?._id} className="more-item__item">
           <Link
              href={`/templates/${template.slug}`}
              className="link d-block">
