@@ -13,15 +13,15 @@ import { getUserByUsername } from "utils/api";
 
 
 export default function UserProfile({params}) {
-  const {data, isLoading} = useQuery({
+  const {data:author, isLoading} = useQuery({
     queryKey: [`user-profile`],
     queryFn: () => getUserByUsername(params?.username),
   });
-  console.log(data);
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <>
-      <TopAreaProfile />
+      <TopAreaProfile author={author} />
       <section className="profile pt-5 padding-b-120">
         <div className="container container-two">
           <div className="tab-content" id="pills-tabb">

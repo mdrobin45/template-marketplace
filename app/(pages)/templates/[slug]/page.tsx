@@ -17,7 +17,6 @@ export default function ProductDetails({ params }) {
       setTemplateData(data);
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [data, isLoading]);
-   console.log(data);
 
    return (
       <>
