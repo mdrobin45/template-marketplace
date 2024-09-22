@@ -1,23 +1,34 @@
 import moment from "moment";
 import Image from "next/image";
+import authConfig from "auth.config";
+import { useSession } from "next-auth/react";
+import NextAuth from "next-auth";
+import gradientBg1 from "@/assets/images/gradients/breadcrumb-gradient-bg.png";
+import elementMoon3 from "@/assets/images/shapes/element-moon3.png";
+import elementOne from "@/assets/images/shapes/element-moon1.png";
+import { useEffect, useState } from "react";
+
 
 export default function TopAreaProfile({ author }: { author: any }) {
+   const { data: session } = useSession();
+
+   console.log(session);
 
    return (
       <section className="breadcrumb-three section-bg position-relative z-index-1 overflow-hidden">
          <img
-            src="assets/images/gradients/breadcrumb-gradient-bg.png"
+            src={gradientBg1.src}
             alt=""
             className="bg--gradient"
          />
 
          <img
-            src="assets/images/shapes/element-moon3.png"
+            src={elementMoon3.src}
             alt=""
             className="element one"
          />
          <img
-            src="assets/images/shapes/element-moon1.png"
+            src={elementOne.src}
             alt=""
             className="element three"
          />

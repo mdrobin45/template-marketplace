@@ -5,6 +5,7 @@ import { TanstackProvider } from "lib/Providers/TanstackQuery";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
 import "./global.css";
+import SessionProvider from "lib/Providers/SessionProvider";
 
 export const metadata = {
    title: "Create Next App",
@@ -18,12 +19,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
    return (
       <html lang="en">
          <body>
-            <ContextProvider>
-               <TanstackProvider>
-                  <Toaster position="top-center" />
-                  {children}
-               </TanstackProvider>
-            </ContextProvider>
+            <SessionProvider>
+               <ContextProvider>
+                  <TanstackProvider>
+                     <Toaster position="top-center" />
+                     {children}
+                  </TanstackProvider>
+               </ContextProvider>
+            </SessionProvider>
          </body>
       </html>
    );
