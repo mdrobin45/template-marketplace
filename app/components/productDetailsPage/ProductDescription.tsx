@@ -31,7 +31,7 @@ export default function ProductDescription() {
             </div>
 
             {/* More Items from this author */}
-           <AuthorMoreItem id={templateData?.author?._id} />
+           <AuthorMoreItem username={templateData?.author?.username} />
          </div>
       </div>
    );

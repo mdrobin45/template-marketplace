@@ -17,6 +17,8 @@ export default function ProductDetails({ params }) {
       setTemplateData(data);
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [data, isLoading]);
+   console.log(data);
+
    return (
       <>
          {!isLoading ? (
@@ -26,7 +28,7 @@ export default function ProductDetails({ params }) {
                   <div className="container container-two">
                      <div className="row gy-4">
                         <ProductDetailsTabContent />
-                        <ProductDetailsSidebar id={data?.author?._id} />
+                        <ProductDetailsSidebar username={data?.author?.username} />
                      </div>
                   </div>
                </div>

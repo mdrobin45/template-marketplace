@@ -63,10 +63,8 @@ export default function ProductDetailsTopArea() {
                               <span className="text">
                                  By{" "}
                                  <a href="#" className="link text-main fw-600">
-                                    {templateData?.author?.firstName +
-                                       " " +
-                                       templateData?.author?.lastName}
-                                 </a>{" "}
+                                    {templateData?.author?.name}
+                                 </a>
                               </span>
                            </div>
                            <div className="breadcrumb-content__item text-heading fw-500 flx-align gap-2">

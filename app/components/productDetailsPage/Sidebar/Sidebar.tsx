@@ -2,25 +2,22 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { AppContext } from "context";
-import Image from "next/image";
-import Link from "next/link";
 import { useContext } from "react";
-import { getAuthorById, getProductBySlug } from "utils/api";
-import moment from "moment";
+import { getUserByUsername } from "utils/api";
 import ProductInfo from "./ProductInfo";
 import AuthorInfo from "./AuthorInfo";
 import MetaAttributes from "./MetaAttributes";
 interface ProductDetailsSidebarProps {
-   id: string;
+   username: string;
 }
 
-export default function ProductDetailsSidebar({ id }: ProductDetailsSidebarProps) {
+export default function ProductDetailsSidebar({ username }: ProductDetailsSidebarProps) {
    const { templateData, isLoading: productLoading } = useContext(AppContext);
 
    // Fetch author data
    const { data: author, isLoading } = useQuery({
-      queryKey: [`author-${id}`],
-      queryFn: () => getAuthorById(id),
+      queryKey: [`author-${username}`],
+      queryFn: () => getUserByUsername(username),
    });
 
 

@@ -13,7 +13,6 @@ export const filterByCategory = async (
       return null;
    }
 };
-
 // Get product by slug
 export const getProductBySlug = async (slug: string): Promise<any | null> => {
    try {
@@ -25,9 +24,9 @@ export const getProductBySlug = async (slug: string): Promise<any | null> => {
 };
 
 // Get author by id
-export const getAuthorById = async (id: string): Promise<any | null> => {
+export const getUserByUsername = async (username: string): Promise<any | null> => {
    try {
-      const { data } = await axiosRequest.get(`/user/${id}`);
+      const { data } = await axiosRequest.get(`/user/${username}`);
       return data;
    } catch {
       return null;

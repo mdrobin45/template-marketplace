@@ -26,7 +26,7 @@ const menu: MainMenuItems[] = [
    },
    {
       linkText: "Profile",
-      linkURL: "/",
+      linkURL: "/profile",
       submenu: false,
    },
    {

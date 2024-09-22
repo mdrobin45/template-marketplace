@@ -7,8 +7,8 @@ export async function GET(request: Request, { params }) {
    try {
       await dbConnect();
 
-      const { id } = params;
-      const data = await User.findById(id).populate("templates");
+      const { username } = params;
+      const data = await User.findOne({ username }).populate("templates");
       return NextResponse.json(data, { status: 200 });
    } catch (error) {
       return NextResponse.json(

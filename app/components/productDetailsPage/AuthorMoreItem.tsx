@@ -1,18 +1,18 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { getAuthorById, getProductBySlug } from "utils/api";
+import { getUserByUsername } from "utils/api";
 import Image from "next/image";
 import Link from "next/link";
 
 interface AuthorMoreItemProps {
-  id: string;
+  username: string;
 }
 
-const AuthorMoreItem = ({ id }: AuthorMoreItemProps) => {
+const AuthorMoreItem = ({ username }: AuthorMoreItemProps) => {
  const { data: author, isLoading } = useQuery({
     queryKey: ["author-moreItems"],
-    queryFn: () => getAuthorById(id),
+    queryFn: () => getUserByUsername(username),
   });
 
   if (isLoading) {

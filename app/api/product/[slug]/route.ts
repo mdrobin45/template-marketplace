@@ -9,7 +9,7 @@ export async function GET(request: Request, { params }) {
       const { slug } = params;
       const data = await Product.findOne({ slug }).populate({
          path: "author",
-         select: "firstName lastName",
+         select: "name username avatar",
       });
       return NextResponse.json(data, { status: 200 });
    } catch (error) {

@@ -7,27 +7,28 @@ import badge3 from "assets/images/logo/Exclusive-Author-badge.webp";
 interface AuthorInfoProps {
     author: {
         avatar: string;
-        firstName: string;
-        lastName: string;
+        name: string;
+        username: string;
     };
 }
 
 export default function AuthorInfo({ author }: AuthorInfoProps) {
+    console.log("AuthorInfo", author);
     return (
         <div className="author-details">
             <div className="d-flex align-items-center gap-2">
                 <div className="author-details__thumb flex-shrink-0">
                     <Image
-                        src={author.avatar}
-                        alt={author.firstName}
+                        src={author?.avatar || "https://i.ibb.co.com/nmCN10Z/avatar.png"}
+                        alt={author?.name}
                         width={100}
                         height={100}
                     />
                 </div>
                 <div className="author-details__content">
                     <h6 className="author-details__name font-18 mb-2">
-                        <Link href={`/profile/${author.firstName}`} className="link hover-text-main">
-                            {author.firstName} {author.lastName}
+                        <Link href={`/profile/${author.username}`} className="link hover-text-main">
+                            {author.name}
                         </Link>
                     </h6>
 
@@ -49,7 +50,7 @@ export default function AuthorInfo({ author }: AuthorInfoProps) {
 
             </ul>
             <Link
-                href={`/profile/${author.firstName}`}
+                href={`/profile/${author.username}`}
                 className="btn btn-outline-light w-100 pill mt-32">
                 View Portfolio
             </Link>
