@@ -66,11 +66,22 @@ export const getFeaturedAuthor = async (): Promise<any | null> => {
 // Credential base user registration
 export const credUserRegister = async (formData: {
    name: string;
+   username: string;
    email: string;
    password: string;
 }): Promise<any | null> => {
    try {
       const response = await axiosRequest.post(`/user/register`, formData);
+      return response;
+   } catch (err) {
+      return err.response;
+   }
+};
+
+// Username verifier
+export const usernameVerifier = async (username: string): Promise<any | null> => {
+   try {
+      const response = await axiosRequest.post(`/user/register/usernameVerifier`, { username });
       return response;
    } catch (err) {
       return err.response;

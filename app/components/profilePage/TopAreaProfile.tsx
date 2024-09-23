@@ -1,8 +1,6 @@
 import moment from "moment";
 import Image from "next/image";
-import authConfig from "auth.config";
 import { useSession } from "next-auth/react";
-import NextAuth from "next-auth";
 import gradientBg1 from "@/assets/images/gradients/breadcrumb-gradient-bg.png";
 import elementMoon3 from "@/assets/images/shapes/element-moon3.png";
 import elementOne from "@/assets/images/shapes/element-moon1.png";

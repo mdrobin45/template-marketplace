@@ -1,3 +1,4 @@
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import authConfig from "auth.config";
 import bcrypt from "bcryptjs";
 import User from "model/user";
@@ -45,7 +46,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       GithubProvider,
    ],
    callbacks: {
-      session({ session, user }) {
+      session({ session }) {
          return session;
       },
    },

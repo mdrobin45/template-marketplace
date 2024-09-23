@@ -14,10 +14,16 @@ export default function useRegister() {
          const formData = new FormData(e.currentTarget);
 
          const name = formData.get("name") as string;
+         const username = formData.get("username") as string;
          const email = formData.get("email") as string;
          const password = formData.get("password") as string;
 
-         const response = await credUserRegister({ name, email, password });
+         const response = await credUserRegister({
+            name,
+            username,
+            email,
+            password,
+         });
 
          // Auto login after registration is successful
          if (response.status === 201) {

@@ -5,9 +5,11 @@ interface InputPropsType {
    label: string,
    required?: boolean,
    id: string,
-   placeholder?:string
+   placeholder?:string,
+   value?:string,
+   onChange?:()=>void
 }
-const InputField =({type,name,label,required,id,placeholder}:InputPropsType)=> {
+const InputField =({type,name,label,required,id,placeholder,value,onChange}:InputPropsType)=> {
    return (
       <>
          {type === "checkbox" ? (
@@ -23,7 +25,7 @@ const InputField =({type,name,label,required,id,placeholder}:InputPropsType)=> {
                </label>
             </div>
          ) : (
-            <div className="mb-4">
+            <div>
                <label
                   htmlFor={id}
                   className="form-label font-18 mb-2 fw-500 font-heading">
@@ -35,6 +37,8 @@ const InputField =({type,name,label,required,id,placeholder}:InputPropsType)=> {
                   className="common-input"
                   id={id}
                   placeholder={placeholder}
+                  value={value}
+                  onChange={onChange}
                />
             </div>
          )}

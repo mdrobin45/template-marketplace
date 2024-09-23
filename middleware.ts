@@ -20,7 +20,7 @@ export async function middleware(request: NextRequest) {
       nextUrl.pathname.startsWith(LOGIN) ||
       nextUrl.pathname.startsWith(REGISTER);
    if (isAuthenticated && isAuthRoute) {
-      return NextResponse.redirect(new URL("/profile", nextUrl));
+      return NextResponse.redirect(new URL("/user", nextUrl));
    }
 }
 
