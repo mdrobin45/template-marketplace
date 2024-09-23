@@ -33,6 +33,16 @@ export const getUserByUsername = async (username: string): Promise<any | null> =
    }
 };
 
+// Get user by email
+export const getUserByEmail = async (email: string): Promise<any | null> => {
+   try {
+      const { data } = await axiosRequest.get(`/user/email/${email}`);
+      return data;
+   } catch {
+      return null;
+   }
+};
+
 // Get featured product
 export const getFeaturedProduct = async (): Promise<any | null> => {
    try {
