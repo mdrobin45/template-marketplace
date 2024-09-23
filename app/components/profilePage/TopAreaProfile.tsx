@@ -4,13 +4,12 @@ import { useSession } from "next-auth/react";
 import gradientBg1 from "@/assets/images/gradients/breadcrumb-gradient-bg.png";
 import elementMoon3 from "@/assets/images/shapes/element-moon3.png";
 import elementOne from "@/assets/images/shapes/element-moon1.png";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "context";
 
 
 export default function TopAreaProfile({ author }: { author: any }) {
-   const { data: session } = useSession();
-
-   console.log(session);
+   const { loggedInuser } = useContext(AppContext);
 
    return (
       <section className="breadcrumb-three section-bg position-relative z-index-1 overflow-hidden">
@@ -86,14 +85,15 @@ export default function TopAreaProfile({ author }: { author: any }) {
                                        </span>
                                     </div>
                                  </div>
-                                 <div className="sales">
-                                    <span className="sales__text mb-1 text-heading fw-500">
-                                       Sales
-                                    </span>
-                                    <h5 className="sales__amount mb-0">15,830</h5>
-                                 </div>
+                                 {
+                                    loggedInuser?.username === author?.username && (<div className="sales">
+                                       <span className="sales__text mb-1 text-heading fw-500">
+                                          Sales
+                                       </span>
+                                       <h5 className="sales__amount mb-0">15,830</h5>
+                                    </div>)
+                                 }
                               </div>
-
                            )
                         }
                      </div>
@@ -187,45 +187,61 @@ export default function TopAreaProfile({ author }: { author: any }) {
                         Templates
                      </button>
                   </li>
-                  <li className="nav-item" role="presentation">
-                     <button
-                        className="tab-link"
-                        id="pills-Settingss-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#pills-Settingss"
-                        type="button"
-                        role="tab"
-                        aria-controls="pills-Settingss"
-                        aria-selected="false">
-                        Settings{" "}
-                     </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                     <button
-                        className="tab-link"
-                        id="pills-earning-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#pills-earning"
-                        type="button"
-                        role="tab"
-                        aria-controls="pills-earning"
-                        aria-selected="false">
-                        Earning{" "}
-                     </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                     <button
-                        className="tab-link"
-                        id="pills-statement-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#pills-statement"
-                        type="button"
-                        role="tab"
-                        aria-controls="pills-statement"
-                        aria-selected="false">
-                        Statement{" "}
-                     </button>
-                  </li>
+                  {
+                     loggedInuser?.username === author?.username && (<><li className="nav-item" role="presentation">
+                        <button
+                           className="tab-link"
+                           id="pills-Settingss-tab"
+                           data-bs-toggle="pill"
+                           data-bs-target="#pills-Settingss"
+                           type="button"
+                           role="tab"
+                           aria-controls="pills-Settingss"
+                           aria-selected="false">
+                           Settings{" "}
+                        </button>
+                     </li>
+                        <li className="nav-item" role="presentation">
+                           <button
+                              className="tab-link"
+                              id="pills-earning-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-earning"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-earning"
+                              aria-selected="false">
+                              Earning{" "}
+                           </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                           <button
+                              className="tab-link"
+                              id="pills-statement-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-statement"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-statement"
+                              aria-selected="false">
+                              Statement{" "}
+                           </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                           <button
+                              className="tab-link"
+                              id="pills-download-tab"
+                              data-bs-toggle="pill"
+                              data-bs-target="#pills-download"
+                              type="button"
+                              role="tab"
+                              aria-controls="pills-download"
+                              aria-selected="false">
+                              Download{" "}
+                           </button>
+                        </li></>)
+                  }
+
                   <li className="nav-item" role="presentation">
                      <button
                         className="tab-link"
@@ -239,19 +255,7 @@ export default function TopAreaProfile({ author }: { author: any }) {
                         Review{" "}
                      </button>
                   </li>
-                  <li className="nav-item" role="presentation">
-                     <button
-                        className="tab-link"
-                        id="pills-download-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#pills-download"
-                        type="button"
-                        role="tab"
-                        aria-controls="pills-download"
-                        aria-selected="false">
-                        Download{" "}
-                     </button>
-                  </li>
+
                </ul>
             </div>
          </div>
